@@ -1,0 +1,335 @@
+{
+  "phase": 5,
+  "date": "2026-06-03",
+  "package_path": "F:\\Gaming\\Stakes\\math-sdk\\games\\treasure_dice",
+  "modes": [
+    {
+      "mode_id": "safe_shore",
+      "cost": 1.0,
+      "rounds": 2000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 0.9792,
+      "rtp_drift": 0.019199999999999995,
+      "theoretical_std": 0.48000000000000004,
+      "simulated_std": 0.4649810318711936,
+      "std_error": 0.01073312629199899,
+      "drift_sigma": 1.7888543819998313,
+      "configured_max_win": 1.2,
+      "mapped_max_win": 1.2,
+      "observed_max_win": 1.2,
+      "weight_sum": 2000,
+      "book_length": 2000,
+      "weight_check_pass": true,
+      "lookup_check_pass": true,
+      "max_win_check_pass": true,
+      "replay_check_pass": true
+    },
+    {
+      "mode_id": "hidden_bay",
+      "cost": 1.0,
+      "rounds": 1000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 1.0032,
+      "rtp_drift": 0.04320000000000013,
+      "theoretical_std": 0.783836717690617,
+      "simulated_std": 0.7737633746824671,
+      "std_error": 0.02478709341572747,
+      "drift_sigma": 1.7428425057933425,
+      "configured_max_win": 1.6,
+      "mapped_max_win": 1.6,
+      "observed_max_win": 1.6,
+      "weight_sum": 1000,
+      "book_length": 1000,
+      "weight_check_pass": true,
+      "lookup_check_pass": true,
+      "max_win_check_pass": true,
+      "replay_check_pass": true
+    },
+    {
+      "mode_id": "coral_reef",
+      "cost": 1.0,
+      "rounds": 1000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 0.9935999999999999,
+      "rtp_drift": 0.03359999999999996,
+      "theoretical_std": 1.1757550765359255,
+      "simulated_std": 1.1821163394522554,
+      "std_error": 0.0371806401235912,
+      "drift_sigma": 0.903696114115063,
+      "configured_max_win": 2.4,
+      "mapped_max_win": 2.4,
+      "observed_max_win": 2.4,
+      "weight_sum": 1000,
+      "book_length": 1000,
+      "weight_check_pass": true,
+      "lookup_check_pass": true,
+      "max_win_check_pass": true,
+      "replay_check_pass": true
+    },
+    {
+      "mode_id": "storm_route",
+      "cost": 1.0,
+      "rounds": 1000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 1.04448,
+      "rtp_drift": 0.08448000000000011,
+      "theoretical_std": 1.6627687752661222,
+      "simulated_std": 1.708761168098105,
+      "std_error": 0.05258136552049595,
+      "drift_sigma": 1.6066528353484892,
+      "configured_max_win": 3.84,
+      "mapped_max_win": 3.84,
+      "observed_max_win": 3.84,
+      "weight_sum": 1000,
+      "book_length": 1000,
+      "weight_check_pass": true,
+      "lookup_check_pass": true,
+      "max_win_check_pass": true,
+      "replay_check_pass": true
+    },
+    {
+      "mode_id": "skull_island",
+      "cost": 1.0,
+      "rounds": 1000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 1.056,
+      "rtp_drift": 0.09600000000000009,
+      "theoretical_std": 2.8800000000000003,
+      "simulated_std": 3.003741666655107,
+      "std_error": 0.09107359661284933,
+      "drift_sigma": 1.0540925533894605,
+      "configured_max_win": 9.6,
+      "mapped_max_win": 9.6,
+      "observed_max_win": 9.6,
+      "weight_sum": 1000,
+      "book_length": 1000,
+      "weight_check_pass": true,
+      "lookup_check_pass": true,
+      "max_win_check_pass": true,
+      "replay_check_pass": true
+    },
+    {
+      "mode_id": "kraken_waters",
+      "cost": 1.0,
+      "rounds": 1000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 1.1136,
+      "rtp_drift": 0.15359999999999996,
+      "theoretical_std": 4.184542985799046,
+      "simulated_std": 4.487874222836464,
+      "std_error": 0.13232686802006613,
+      "drift_sigma": 1.1607620001760184,
+      "configured_max_win": 19.2,
+      "mapped_max_win": 19.2,
+      "observed_max_win": 19.2,
+      "weight_sum": 1000,
+      "book_length": 1000,
+      "weight_check_pass": true,
+      "lookup_check_pass": true,
+      "max_win_check_pass": true,
+      "replay_check_pass": true
+    },
+    {
+      "mode_id": "lost_treasure",
+      "cost": 1.0,
+      "rounds": 2000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 0.864,
+      "rtp_drift": -0.09599999999999997,
+      "theoretical_std": 9.551879396223553,
+      "simulated_std": 9.066283913489583,
+      "std_error": 0.2135865164283551,
+      "drift_sigma": -0.4494665749754946,
+      "configured_max_win": 96.0,
+      "mapped_max_win": 96.0,
+      "observed_max_win": 96.0,
+      "weight_sum": 2000,
+      "book_length": 2000,
+      "weight_check_pass": true,
+      "lookup_check_pass": true,
+      "max_win_check_pass": true,
+      "replay_check_pass": true
+    },
+    {
+      "mode_id": "treasure_hunt_buy",
+      "cost": 100.0,
+      "rounds": 1000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 0.9340999999999999,
+      "rtp_drift": -0.025900000000000034,
+      "theoretical_std": 75.1398695766768,
+      "simulated_std": 75.57295746495568,
+      "std_error": 0.02376131309502907,
+      "drift_sigma": -1.0900071008878034,
+      "configured_max_win": 275.0,
+      "mapped_max_win": 275.0,
+      "observed_max_win": 275.0,
+      "weight_sum": 1000,
+      "book_length": 1000,
+      "weight_check_pass": true,
+      "lookup_check_pass": true,
+      "max_win_check_pass": true,
+      "replay_check_pass": true
+    }
+  ],
+  "checks": {
+    "all_weight_checks_pass": true,
+    "all_lookup_checks_pass": true,
+    "all_max_win_checks_pass": true,
+    "all_replay_checks_pass": true
+  },
+  "rounding": {
+    "regular_modes": [
+      {
+        "mode_id": "safe_shore",
+        "bet": 0.01,
+        "effective_rtp": 0.8,
+        "drift_vs_target": -0.15999999999999992
+      },
+      {
+        "mode_id": "safe_shore",
+        "bet": 0.02,
+        "effective_rtp": 0.8,
+        "drift_vs_target": -0.15999999999999992
+      },
+      {
+        "mode_id": "safe_shore",
+        "bet": 0.05,
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
+      },
+      {
+        "mode_id": "hidden_bay",
+        "bet": 0.01,
+        "effective_rtp": 1.2,
+        "drift_vs_target": 0.24
+      },
+      {
+        "mode_id": "hidden_bay",
+        "bet": 0.02,
+        "effective_rtp": 0.8999999999999999,
+        "drift_vs_target": -0.06000000000000005
+      },
+      {
+        "mode_id": "hidden_bay",
+        "bet": 0.05,
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
+      },
+      {
+        "mode_id": "coral_reef",
+        "bet": 0.01,
+        "effective_rtp": 0.8,
+        "drift_vs_target": -0.15999999999999992
+      },
+      {
+        "mode_id": "coral_reef",
+        "bet": 0.02,
+        "effective_rtp": 1.0000000000000002,
+        "drift_vs_target": 0.04000000000000026
+      },
+      {
+        "mode_id": "coral_reef",
+        "bet": 0.05,
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
+      },
+      {
+        "mode_id": "storm_route",
+        "bet": 0.01,
+        "effective_rtp": 1.0,
+        "drift_vs_target": 0.040000000000000036
+      },
+      {
+        "mode_id": "storm_route",
+        "bet": 0.02,
+        "effective_rtp": 1.0,
+        "drift_vs_target": 0.040000000000000036
+      },
+      {
+        "mode_id": "storm_route",
+        "bet": 0.05,
+        "effective_rtp": 0.95,
+        "drift_vs_target": -0.010000000000000009
+      },
+      {
+        "mode_id": "skull_island",
+        "bet": 0.01,
+        "effective_rtp": 1.0000000000000002,
+        "drift_vs_target": 0.04000000000000026
+      },
+      {
+        "mode_id": "skull_island",
+        "bet": 0.02,
+        "effective_rtp": 0.9500000000000002,
+        "drift_vs_target": -0.009999999999999787
+      },
+      {
+        "mode_id": "skull_island",
+        "bet": 0.05,
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
+      },
+      {
+        "mode_id": "kraken_waters",
+        "bet": 0.01,
+        "effective_rtp": 0.9500000000000002,
+        "drift_vs_target": -0.009999999999999787
+      },
+      {
+        "mode_id": "kraken_waters",
+        "bet": 0.02,
+        "effective_rtp": 0.9500000000000002,
+        "drift_vs_target": -0.009999999999999787
+      },
+      {
+        "mode_id": "kraken_waters",
+        "bet": 0.05,
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
+      },
+      {
+        "mode_id": "lost_treasure",
+        "bet": 0.01,
+        "effective_rtp": 0.9599999999999999,
+        "drift_vs_target": -1.1102230246251565e-16
+      },
+      {
+        "mode_id": "lost_treasure",
+        "bet": 0.02,
+        "effective_rtp": 0.9599999999999999,
+        "drift_vs_target": -1.1102230246251565e-16
+      },
+      {
+        "mode_id": "lost_treasure",
+        "bet": 0.05,
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
+      }
+    ],
+    "bonus_mode": [
+      {
+        "mode_id": "treasure_hunt_buy",
+        "bet": 0.01,
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
+      },
+      {
+        "mode_id": "treasure_hunt_buy",
+        "bet": 0.02,
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
+      },
+      {
+        "mode_id": "treasure_hunt_buy",
+        "bet": 0.05,
+        "effective_rtp": 0.9600000000000002,
+        "drift_vs_target": 2.220446049250313e-16
+      }
+    ]
+  },
+  "notes": [
+    "Simulated RTP values are based on current package-generation simulation counts in run.py.",
+    "Short runs are expected to deviate from 0.96, especially for high-volatility low-hit modes."
+  ]
+}

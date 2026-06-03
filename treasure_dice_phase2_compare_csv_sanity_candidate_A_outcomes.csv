@@ -1,0 +1,7 @@
+outcome_id,weight,theoretical_probability,simulated_probability,payout_multiplier,payout_vs_cost,event_count,notes
+A1,18,0.18,0.15,0.0,0.0,3,"Full miss, short reveal path."
+A2,22,0.22,0.15,50.0,0.5,3,Low chest recovery outcome.
+A3,22,0.22,0.2,90.0,0.9,4,Near break-even path.
+A4,18,0.18,0.25,120.0,1.2,4,First profitable tier.
+A5,12,0.12,0.1,180.0,1.8,5,Mid-tier profitable path.
+A6,8,0.08,0.15,275.0,2.75,6,Top tier for Candidate A.

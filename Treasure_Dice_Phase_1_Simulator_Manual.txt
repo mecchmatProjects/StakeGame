@@ -1,0 +1,162 @@
+Treasure Dice Phase 1 Simulator Manual
+
+Purpose
+This manual describes the standalone Python simulator that models only Phase 1 features of Treasure Dice: the seven regular routes. The script does not include Bonus Buy, deterministic event packaging, or Math SDK publication artifacts.
+
+Files
+1. treasure_dice_phase1_simulator.py
+   Standalone Python simulator for Treasure Dice regular-route rounds.
+2. treasure_dice_phase1_report_sample.json
+   Example JSON output produced during validation.
+3. treasure_dice_phase1_simulator_sample.log
+   Example round-by-round log produced during validation.
+
+Phase 1 Scope
+Included features:
+1. Seven regular routes.
+2. Fixed win probabilities.
+3. Fixed payout multipliers.
+4. Per-round settlement: win or loss only.
+5. Full round-by-round output for N simulated rounds.
+6. Aggregate summary statistics by mode and overall.
+
+Excluded features:
+1. Bonus Buy mode treasure_hunt_buy.
+2. Near-miss presentation variants.
+3. Replay-safe event mapping.
+4. Stake Engine books, lookup tables, and configs.
+5. Any frontend animation logic.
+
+Mathematical Model
+For each route with win probability p and payout multiplier M:
+1. Outcome space:
+   - Win with probability p.
+   - Loss with probability 1 - p.
+2. Win payout:
+   payout = base_bet * M
+3. Loss payout:
+   payout = 0
+4. Net profit:
+   net_profit = payout - base_bet
+5. Theoretical RTP:
+   RTP = p * M
+6. Variance of payout multiplier X:
+   Var(X) = p * M^2 - RTP^2
+
+Route Definitions Implemented
+1. safe_shore: p=0.80, M=1.20
+2. hidden_bay: p=0.60, M=1.60
+3. coral_reef: p=0.40, M=2.40
+4. storm_route: p=0.25, M=3.84
+5. skull_island: p=0.10, M=9.60
+6. kraken_waters: p=0.05, M=19.20
+7. lost_treasure: p=0.01, M=96.00
+
+What The Script Outputs
+The script produces two kinds of output.
+
+1. Log output to console and log file.
+   Each round logs:
+   - round number
+   - selected route
+   - random roll
+   - win/loss result
+   - payout amount
+   - net profit
+   - running RTP
+
+2. JSON report file.
+   The JSON report contains:
+   - phase identifier
+   - feature scope
+   - total rounds
+   - bet amount
+   - selection policy
+   - RNG seed
+   - theoretical RTP target
+   - total wager
+   - total payout
+   - total net profit
+   - simulated RTP
+   - list of all round records
+   - per-mode summaries
+
+Selection Policies
+The simulator supports three route-selection modes.
+
+1. cycle
+   Cycles through the seven regular routes in order.
+2. random
+   Chooses one of the seven routes uniformly at random each round.
+3. single
+   Repeats one specific route for every round.
+
+Dependencies
+1. Python 3.10 or higher is required by repo instructions.
+2. Python 3.12 was used during validation.
+3. No third-party packages are required.
+
+How To Run
+From the repository root:
+
+python .\treasure_dice_phase1_simulator.py --rounds 20 --selection-policy cycle
+
+Useful command examples:
+
+1. Cycle through all routes for 14 rounds:
+python .\treasure_dice_phase1_simulator.py --rounds 14 --selection-policy cycle
+
+2. Simulate 100 rounds on one route only:
+python .\treasure_dice_phase1_simulator.py --rounds 100 --selection-policy single --mode-id storm_route
+
+3. Simulate 1000 random route selections with a fixed seed:
+python .\treasure_dice_phase1_simulator.py --rounds 1000 --selection-policy random --seed 123
+
+4. Write custom output files:
+python .\treasure_dice_phase1_simulator.py --rounds 50 --report-file .\my_report.json --log-file .\my_run.log
+
+Command-Line Arguments
+1. --rounds
+   Number of rounds to simulate.
+2. --bet
+   Base bet amount per round. Default is 1.0.
+3. --selection-policy
+   One of cycle, random, or single.
+4. --mode-id
+   Route to use when selection-policy is single.
+5. --seed
+   Random seed for deterministic runs.
+6. --report-file
+   Output path for the JSON report.
+7. --log-file
+   Output path for the log file.
+8. --log-level
+   Logging verbosity. Default is INFO.
+
+Implementation Notes
+1. Logging is used instead of print statements.
+2. The logger writes both to console and to a file.
+3. The script uses dataclasses for route definitions and round records.
+4. All regular routes are hardcoded from the current game brief.
+5. This script is intended for mathematical inspection and early behavior validation, not for final Stake Engine publication.
+
+Validation Performed
+Validation command used:
+python .\treasure_dice_phase1_simulator.py --rounds 7 --selection-policy cycle --seed 7 --report-file .\treasure_dice_phase1_report_sample.json --log-file .\treasure_dice_phase1_simulator_sample.log
+
+Validation result:
+1. Script executed successfully.
+2. Console and log output showed all seven rounds.
+3. JSON report file was generated successfully.
+
+Limitations
+1. This script does not model Bonus Buy.
+2. This script does not model rounding drift policy choices.
+3. This script does not emit Stake Engine event objects.
+4. This script does not create books, lookup tables, or index metadata.
+5. This script uses uniform route choice in random mode, which is only a simulation convenience and not a platform behavior assumption.
+
+Recommended Next Steps
+1. Extend the reporting if formal Monte Carlo validation of each regular route is needed.
+2. Add Phase 2 logic in a separate script or extend this script only after Bonus Buy design is approved.
+3. Keep Math SDK packaging separate from this standalone simulator so mathematical validation remains easy to inspect.

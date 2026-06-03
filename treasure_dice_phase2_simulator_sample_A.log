@@ -1,0 +1,18 @@
+2026-06-03 13:02:13,008 | INFO | Round 1 | candidate=A | draw=0.452380 | outcome=A3 | payout=90.0000 | payout_vs_cost=0.9000 | net=-10.0000 | cum_rtp=0.900000
+2026-06-03 13:02:13,009 | INFO | Round 2 | candidate=A | draw=0.559772 | outcome=A3 | payout=90.0000 | payout_vs_cost=0.9000 | net=-10.0000 | cum_rtp=0.900000
+2026-06-03 13:02:13,009 | INFO | Round 3 | candidate=A | draw=0.924211 | outcome=A6 | payout=275.0000 | payout_vs_cost=2.7500 | net=175.0000 | cum_rtp=1.516667
+2026-06-03 13:02:13,009 | INFO | Round 4 | candidate=A | draw=0.465650 | outcome=A3 | payout=90.0000 | payout_vs_cost=0.9000 | net=-10.0000 | cum_rtp=1.362500
+2026-06-03 13:02:13,009 | INFO | Round 5 | candidate=A | draw=0.507841 | outcome=A3 | payout=90.0000 | payout_vs_cost=0.9000 | net=-10.0000 | cum_rtp=1.270000
+2026-06-03 13:02:13,009 | INFO | Round 6 | candidate=A | draw=0.587385 | outcome=A3 | payout=90.0000 | payout_vs_cost=0.9000 | net=-10.0000 | cum_rtp=1.208333
+2026-06-03 13:02:13,009 | INFO | Round 7 | candidate=A | draw=0.184660 | outcome=A2 | payout=50.0000 | payout_vs_cost=0.5000 | net=-50.0000 | cum_rtp=1.107143
+2026-06-03 13:02:13,009 | INFO | Round 8 | candidate=A | draw=0.511909 | outcome=A3 | payout=90.0000 | payout_vs_cost=0.9000 | net=-10.0000 | cum_rtp=1.081250
+2026-06-03 13:02:13,011 | INFO | Completed 8 bonus rounds | candidate=A | simulated_rtp=1.081250 | report=treasure_dice_phase2_report_sample_A.json
+2026-06-03 13:02:24,226 | INFO | Round 1 | candidate=A | draw=0.452380 | outcome=A3 | payout=90.0000 | payout_vs_cost=0.9000 | net=-10.0000 | cum_rtp=0.900000
+2026-06-03 13:02:24,226 | INFO | Round 2 | candidate=A | draw=0.559772 | outcome=A3 | payout=90.0000 | payout_vs_cost=0.9000 | net=-10.0000 | cum_rtp=0.900000
+2026-06-03 13:02:24,226 | INFO | Round 3 | candidate=A | draw=0.924211 | outcome=A6 | payout=275.0000 | payout_vs_cost=2.7500 | net=175.0000 | cum_rtp=1.516667
+2026-06-03 13:02:24,226 | INFO | Round 4 | candidate=A | draw=0.465650 | outcome=A3 | payout=90.0000 | payout_vs_cost=0.9000 | net=-10.0000 | cum_rtp=1.362500
+2026-06-03 13:02:24,226 | INFO | Round 5 | candidate=A | draw=0.507841 | outcome=A3 | payout=90.0000 | payout_vs_cost=0.9000 | net=-10.0000 | cum_rtp=1.270000
+2026-06-03 13:02:24,226 | INFO | Round 6 | candidate=A | draw=0.587385 | outcome=A3 | payout=90.0000 | payout_vs_cost=0.9000 | net=-10.0000 | cum_rtp=1.208333
+2026-06-03 13:02:24,227 | INFO | Round 7 | candidate=A | draw=0.184660 | outcome=A2 | payout=50.0000 | payout_vs_cost=0.5000 | net=-50.0000 | cum_rtp=1.107143
+2026-06-03 13:02:24,227 | INFO | Round 8 | candidate=A | draw=0.511909 | outcome=A3 | payout=90.0000 | payout_vs_cost=0.9000 | net=-10.0000 | cum_rtp=1.081250
+2026-06-03 13:02:24,227 | INFO | Completed 8 bonus rounds | candidate=A | simulated_rtp=1.081250 | report=treasure_dice_phase2_report_sample_A.json

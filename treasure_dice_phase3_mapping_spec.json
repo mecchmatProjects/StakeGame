@@ -1,0 +1,683 @@
+{
+  "spec_id": "treasure_dice_phase3_mapping_v1",
+  "phase": 3,
+  "date": "2026-06-03",
+  "source": "Game_Description.md",
+  "determinism_rules": [
+    "Settlement is fixed before presentation begins.",
+    "Each mode_id + outcome_id maps to exactly one payout and one ordered event sequence.",
+    "Replay must use stored mode_id and outcome_id only.",
+    "Presentation variants do not alter probability or payout."
+  ],
+  "event_families": {
+    "regular": [
+      "route_reveal",
+      "route_win",
+      "route_lose_storm",
+      "route_lose_reef",
+      "route_lose_skull",
+      "route_lose_kraken",
+      "route_near_miss",
+      "route_complete"
+    ],
+    "bonus": [
+      "bonus_step",
+      "bonus_complete"
+    ]
+  },
+  "regular_modes": [
+    {
+      "mode_id": "safe_shore",
+      "cost_multiplier": 1,
+      "win_probability": 0.8,
+      "win_payout_multiplier": 1.2,
+      "loss_family_shares": {
+        "route_lose_storm": 0.4,
+        "route_lose_reef": 0.25,
+        "route_lose_skull": 0.2,
+        "route_lose_kraken": 0.1,
+        "route_near_miss": 0.05
+      },
+      "outcomes": [
+        {
+          "outcome_id": "safe_shore_win",
+          "probability": 0.8,
+          "payout_multiplier": 1.2,
+          "event_sequence": [
+            "route_reveal",
+            "route_win",
+            "route_complete"
+          ],
+          "presentation_only": false
+        },
+        {
+          "outcome_id": "safe_shore_lose_storm",
+          "probability": 0.08,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_storm",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "safe_shore_lose_reef",
+          "probability": 0.05,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_reef",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "safe_shore_lose_skull",
+          "probability": 0.04,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_skull",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "safe_shore_lose_kraken",
+          "probability": 0.02,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_kraken",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "safe_shore_near_miss",
+          "probability": 0.01,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_near_miss",
+            "route_complete"
+          ],
+          "presentation_only": true
+        }
+      ]
+    },
+    {
+      "mode_id": "hidden_bay",
+      "cost_multiplier": 1,
+      "win_probability": 0.6,
+      "win_payout_multiplier": 1.6,
+      "loss_family_shares": {
+        "route_lose_storm": 0.4,
+        "route_lose_reef": 0.25,
+        "route_lose_skull": 0.2,
+        "route_lose_kraken": 0.1,
+        "route_near_miss": 0.05
+      },
+      "outcomes": [
+        {
+          "outcome_id": "hidden_bay_win",
+          "probability": 0.6,
+          "payout_multiplier": 1.6,
+          "event_sequence": [
+            "route_reveal",
+            "route_win",
+            "route_complete"
+          ],
+          "presentation_only": false
+        },
+        {
+          "outcome_id": "hidden_bay_lose_storm",
+          "probability": 0.16,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_storm",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "hidden_bay_lose_reef",
+          "probability": 0.1,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_reef",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "hidden_bay_lose_skull",
+          "probability": 0.08,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_skull",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "hidden_bay_lose_kraken",
+          "probability": 0.04,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_kraken",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "hidden_bay_near_miss",
+          "probability": 0.02,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_near_miss",
+            "route_complete"
+          ],
+          "presentation_only": true
+        }
+      ]
+    },
+    {
+      "mode_id": "coral_reef",
+      "cost_multiplier": 1,
+      "win_probability": 0.4,
+      "win_payout_multiplier": 2.4,
+      "loss_family_shares": {
+        "route_lose_storm": 0.4,
+        "route_lose_reef": 0.25,
+        "route_lose_skull": 0.2,
+        "route_lose_kraken": 0.1,
+        "route_near_miss": 0.05
+      },
+      "outcomes": [
+        {
+          "outcome_id": "coral_reef_win",
+          "probability": 0.4,
+          "payout_multiplier": 2.4,
+          "event_sequence": [
+            "route_reveal",
+            "route_win",
+            "route_complete"
+          ],
+          "presentation_only": false
+        },
+        {
+          "outcome_id": "coral_reef_lose_storm",
+          "probability": 0.24,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_storm",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "coral_reef_lose_reef",
+          "probability": 0.15,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_reef",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "coral_reef_lose_skull",
+          "probability": 0.12,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_skull",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "coral_reef_lose_kraken",
+          "probability": 0.06,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_kraken",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "coral_reef_near_miss",
+          "probability": 0.03,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_near_miss",
+            "route_complete"
+          ],
+          "presentation_only": true
+        }
+      ]
+    },
+    {
+      "mode_id": "storm_route",
+      "cost_multiplier": 1,
+      "win_probability": 0.25,
+      "win_payout_multiplier": 3.84,
+      "loss_family_shares": {
+        "route_lose_storm": 0.4,
+        "route_lose_reef": 0.25,
+        "route_lose_skull": 0.2,
+        "route_lose_kraken": 0.1,
+        "route_near_miss": 0.05
+      },
+      "outcomes": [
+        {
+          "outcome_id": "storm_route_win",
+          "probability": 0.25,
+          "payout_multiplier": 3.84,
+          "event_sequence": [
+            "route_reveal",
+            "route_win",
+            "route_complete"
+          ],
+          "presentation_only": false
+        },
+        {
+          "outcome_id": "storm_route_lose_storm",
+          "probability": 0.3,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_storm",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "storm_route_lose_reef",
+          "probability": 0.1875,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_reef",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "storm_route_lose_skull",
+          "probability": 0.15,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_skull",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "storm_route_lose_kraken",
+          "probability": 0.075,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_kraken",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "storm_route_near_miss",
+          "probability": 0.0375,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_near_miss",
+            "route_complete"
+          ],
+          "presentation_only": true
+        }
+      ]
+    },
+    {
+      "mode_id": "skull_island",
+      "cost_multiplier": 1,
+      "win_probability": 0.1,
+      "win_payout_multiplier": 9.6,
+      "loss_family_shares": {
+        "route_lose_storm": 0.4,
+        "route_lose_reef": 0.25,
+        "route_lose_skull": 0.2,
+        "route_lose_kraken": 0.1,
+        "route_near_miss": 0.05
+      },
+      "outcomes": [
+        {
+          "outcome_id": "skull_island_win",
+          "probability": 0.1,
+          "payout_multiplier": 9.6,
+          "event_sequence": [
+            "route_reveal",
+            "route_win",
+            "route_complete"
+          ],
+          "presentation_only": false
+        },
+        {
+          "outcome_id": "skull_island_lose_storm",
+          "probability": 0.36,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_storm",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "skull_island_lose_reef",
+          "probability": 0.225,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_reef",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "skull_island_lose_skull",
+          "probability": 0.18,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_skull",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "skull_island_lose_kraken",
+          "probability": 0.09,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_kraken",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "skull_island_near_miss",
+          "probability": 0.045,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_near_miss",
+            "route_complete"
+          ],
+          "presentation_only": true
+        }
+      ]
+    },
+    {
+      "mode_id": "kraken_waters",
+      "cost_multiplier": 1,
+      "win_probability": 0.05,
+      "win_payout_multiplier": 19.2,
+      "loss_family_shares": {
+        "route_lose_storm": 0.4,
+        "route_lose_reef": 0.25,
+        "route_lose_skull": 0.2,
+        "route_lose_kraken": 0.1,
+        "route_near_miss": 0.05
+      },
+      "outcomes": [
+        {
+          "outcome_id": "kraken_waters_win",
+          "probability": 0.05,
+          "payout_multiplier": 19.2,
+          "event_sequence": [
+            "route_reveal",
+            "route_win",
+            "route_complete"
+          ],
+          "presentation_only": false
+        },
+        {
+          "outcome_id": "kraken_waters_lose_storm",
+          "probability": 0.38,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_storm",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "kraken_waters_lose_reef",
+          "probability": 0.2375,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_reef",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "kraken_waters_lose_skull",
+          "probability": 0.19,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_skull",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "kraken_waters_lose_kraken",
+          "probability": 0.095,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_kraken",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "kraken_waters_near_miss",
+          "probability": 0.0475,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_near_miss",
+            "route_complete"
+          ],
+          "presentation_only": true
+        }
+      ]
+    },
+    {
+      "mode_id": "lost_treasure",
+      "cost_multiplier": 1,
+      "win_probability": 0.01,
+      "win_payout_multiplier": 96.0,
+      "loss_family_shares": {
+        "route_lose_storm": 0.4,
+        "route_lose_reef": 0.25,
+        "route_lose_skull": 0.2,
+        "route_lose_kraken": 0.1,
+        "route_near_miss": 0.05
+      },
+      "outcomes": [
+        {
+          "outcome_id": "lost_treasure_win",
+          "probability": 0.01,
+          "payout_multiplier": 96.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_win",
+            "route_complete"
+          ],
+          "presentation_only": false
+        },
+        {
+          "outcome_id": "lost_treasure_lose_storm",
+          "probability": 0.396,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_storm",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "lost_treasure_lose_reef",
+          "probability": 0.2475,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_reef",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "lost_treasure_lose_skull",
+          "probability": 0.198,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_skull",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "lost_treasure_lose_kraken",
+          "probability": 0.099,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_lose_kraken",
+            "route_complete"
+          ],
+          "presentation_only": true
+        },
+        {
+          "outcome_id": "lost_treasure_near_miss",
+          "probability": 0.0495,
+          "payout_multiplier": 0.0,
+          "event_sequence": [
+            "route_reveal",
+            "route_near_miss",
+            "route_complete"
+          ],
+          "presentation_only": true
+        }
+      ]
+    }
+  ],
+  "bonus_mode": {
+    "mode_id": "treasure_hunt_buy",
+    "cost_multiplier": 100,
+    "selected_candidate": "A",
+    "outcomes": [
+      {
+        "outcome_id": "A1",
+        "probability": 0.18,
+        "payout_multiplier_vs_base_bet": 0.0,
+        "event_count": 3,
+        "event_sequence": [
+          "bonus_step",
+          "bonus_step",
+          "bonus_complete"
+        ],
+        "presentation_only": false
+      },
+      {
+        "outcome_id": "A2",
+        "probability": 0.22,
+        "payout_multiplier_vs_base_bet": 50.0,
+        "event_count": 3,
+        "event_sequence": [
+          "bonus_step",
+          "bonus_step",
+          "bonus_complete"
+        ],
+        "presentation_only": false
+      },
+      {
+        "outcome_id": "A3",
+        "probability": 0.22,
+        "payout_multiplier_vs_base_bet": 90.0,
+        "event_count": 4,
+        "event_sequence": [
+          "bonus_step",
+          "bonus_step",
+          "bonus_step",
+          "bonus_complete"
+        ],
+        "presentation_only": false
+      },
+      {
+        "outcome_id": "A4",
+        "probability": 0.18,
+        "payout_multiplier_vs_base_bet": 120.0,
+        "event_count": 4,
+        "event_sequence": [
+          "bonus_step",
+          "bonus_step",
+          "bonus_step",
+          "bonus_complete"
+        ],
+        "presentation_only": false
+      },
+      {
+        "outcome_id": "A5",
+        "probability": 0.12,
+        "payout_multiplier_vs_base_bet": 180.0,
+        "event_count": 5,
+        "event_sequence": [
+          "bonus_step",
+          "bonus_step",
+          "bonus_step",
+          "bonus_step",
+          "bonus_complete"
+        ],
+        "presentation_only": false
+      },
+      {
+        "outcome_id": "A6",
+        "probability": 0.08,
+        "payout_multiplier_vs_base_bet": 275.0,
+        "event_count": 6,
+        "event_sequence": [
+          "bonus_step",
+          "bonus_step",
+          "bonus_step",
+          "bonus_step",
+          "bonus_step",
+          "bonus_complete"
+        ],
+        "presentation_only": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+round_number,candidate_id,base_bet,cost_multiplier,bonus_cost,draw,outcome_id,outcome_probability,payout_multiplier,payout,payout_vs_cost,net_profit,event_count,event_sequence,cumulative_wager,cumulative_payout,cumulative_rtp
+1,A,1.0,100.0,100.0,0.463007,A3,0.22,90.0,90.0,0.9,-10.0,4,"['bonus_step', 'bonus_step', 'bonus_step', 'bonus_complete']",100.0,90.0,0.9
+2,A,1.0,100.0,100.0,0.373312,A2,0.22,50.0,50.0,0.5,-50.0,3,"['bonus_step', 'bonus_step', 'bonus_complete']",200.0,140.0,0.7
+3,A,1.0,100.0,100.0,0.138539,A1,0.18,0.0,0.0,0.0,-100.0,3,"['bonus_step', 'bonus_step', 'bonus_complete']",300.0,140.0,0.466667
+4,A,1.0,100.0,100.0,0.866562,A5,0.12,180.0,180.0,1.8,80.0,5,"['bonus_step', 'bonus_step', 'bonus_step', 'bonus_step', 'bonus_complete']",400.0,320.0,0.8
+5,A,1.0,100.0,100.0,0.006435,A1,0.18,0.0,0.0,0.0,-100.0,3,"['bonus_step', 'bonus_step', 'bonus_complete']",500.0,320.0,0.64

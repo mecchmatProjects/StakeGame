@@ -1,0 +1,332 @@
+{
+  "generated_at_utc": "2026-06-03T10:38:59.216580+00:00",
+  "rounds_per_mode": 1000000,
+  "structure_consistency": {
+    "mapping_config_mode_match": true,
+    "index_config_mode_match": true,
+    "publish_books_match": true,
+    "publish_lookups_match": true,
+    "lookup_tables_match": true,
+    "force_files_match": true
+  },
+  "docs_existence": {
+    "Treasure_Dice_Mathematician_Handoff.md": true,
+    "Treasure_Dice_Phase_1_Math_Report.md": true,
+    "Treasure_Dice_Phase_2_Bonus_Report.md": true,
+    "Treasure_Dice_Phase_3_Event_Mapping_Report.md": true,
+    "Treasure_Dice_Phase_4_Package_Completeness_Report.md": true,
+    "Treasure_Dice_Phase_5_Simulation_Report.md": true,
+    "Treasure_Dice_Phase_5_Volatility_Report.md": true,
+    "Treasure_Dice_Phase_5_Replay_Audit_Report.md": true,
+    "Treasure_Dice_Phase_5_Final_Validation_Summary.md": true,
+    "Treasure_Dice_Phase_6_Delivery_Manifest.md": true,
+    "Treasure_Dice_Phase_6_Risk_Assessment.md": true,
+    "Treasure_Dice_Phase_6_Acceptance_Checklist.md": true,
+    "Treasure_Dice_Phase_6_Publication_Status_Note.md": true,
+    "Treasure_Dice_Mathematician_Artifacts_Package.docx": true
+  },
+  "broken_markdown_links": {},
+  "expected_files": {
+    "publish_books": [
+      "books_coral_reef.jsonl.zst",
+      "books_hidden_bay.jsonl.zst",
+      "books_kraken_waters.jsonl.zst",
+      "books_lost_treasure.jsonl.zst",
+      "books_safe_shore.jsonl.zst",
+      "books_skull_island.jsonl.zst",
+      "books_storm_route.jsonl.zst",
+      "books_treasure_hunt_buy.jsonl.zst"
+    ],
+    "publish_lookups": [
+      "lookUpTable_coral_reef_0.csv",
+      "lookUpTable_hidden_bay_0.csv",
+      "lookUpTable_kraken_waters_0.csv",
+      "lookUpTable_lost_treasure_0.csv",
+      "lookUpTable_safe_shore_0.csv",
+      "lookUpTable_skull_island_0.csv",
+      "lookUpTable_storm_route_0.csv",
+      "lookUpTable_treasure_hunt_buy_0.csv"
+    ],
+    "lookup_tables": [
+      "lookUpTable_coral_reef.csv",
+      "lookUpTable_hidden_bay.csv",
+      "lookUpTable_kraken_waters.csv",
+      "lookUpTable_lost_treasure.csv",
+      "lookUpTable_safe_shore.csv",
+      "lookUpTable_skull_island.csv",
+      "lookUpTable_storm_route.csv",
+      "lookUpTable_treasure_hunt_buy.csv"
+    ],
+    "force_files": [
+      "force_record_coral_reef.json",
+      "force_record_hidden_bay.json",
+      "force_record_kraken_waters.json",
+      "force_record_lost_treasure.json",
+      "force_record_safe_shore.json",
+      "force_record_skull_island.json",
+      "force_record_storm_route.json",
+      "force_record_treasure_hunt_buy.json"
+    ]
+  },
+  "observed_files": {
+    "publish_books": [
+      "books_coral_reef.jsonl.zst",
+      "books_hidden_bay.jsonl.zst",
+      "books_kraken_waters.jsonl.zst",
+      "books_lost_treasure.jsonl.zst",
+      "books_safe_shore.jsonl.zst",
+      "books_skull_island.jsonl.zst",
+      "books_storm_route.jsonl.zst",
+      "books_treasure_hunt_buy.jsonl.zst"
+    ],
+    "publish_lookups": [
+      "lookUpTable_coral_reef_0.csv",
+      "lookUpTable_hidden_bay_0.csv",
+      "lookUpTable_kraken_waters_0.csv",
+      "lookUpTable_lost_treasure_0.csv",
+      "lookUpTable_safe_shore_0.csv",
+      "lookUpTable_skull_island_0.csv",
+      "lookUpTable_storm_route_0.csv",
+      "lookUpTable_treasure_hunt_buy_0.csv"
+    ],
+    "lookup_tables": [
+      "lookUpTable_coral_reef.csv",
+      "lookUpTable_hidden_bay.csv",
+      "lookUpTable_kraken_waters.csv",
+      "lookUpTable_lost_treasure.csv",
+      "lookUpTable_safe_shore.csv",
+      "lookUpTable_skull_island.csv",
+      "lookUpTable_storm_route.csv",
+      "lookUpTable_treasure_hunt_buy.csv"
+    ],
+    "force_files": [
+      "force_record_coral_reef.json",
+      "force_record_hidden_bay.json",
+      "force_record_kraken_waters.json",
+      "force_record_lost_treasure.json",
+      "force_record_safe_shore.json",
+      "force_record_skull_island.json",
+      "force_record_storm_route.json",
+      "force_record_treasure_hunt_buy.json"
+    ]
+  },
+  "mode_consistency": [
+    {
+      "mode_id": "safe_shore",
+      "cost": 1.0,
+      "theoretical_rtp": 0.96,
+      "lookup_rtp": 0.9792,
+      "lookup_rtp_delta": 0.019199999999999995,
+      "theoretical_std": 0.48000000000000004,
+      "lookup_std": 0.4649810318711936,
+      "lookup_std_error": 0.01073312629199899,
+      "lookup_drift_sigma": 1.7888543819998313,
+      "configured_max_win": 1.2,
+      "mapped_max_win": 1.2,
+      "observed_max_win": 1.2,
+      "weights_sum": 2000,
+      "books_len": 2000,
+      "consistency_pass": true
+    },
+    {
+      "mode_id": "hidden_bay",
+      "cost": 1.0,
+      "theoretical_rtp": 0.96,
+      "lookup_rtp": 1.0032,
+      "lookup_rtp_delta": 0.04320000000000013,
+      "theoretical_std": 0.783836717690617,
+      "lookup_std": 0.7737633746824671,
+      "lookup_std_error": 0.02478709341572747,
+      "lookup_drift_sigma": 1.7428425057933425,
+      "configured_max_win": 1.6,
+      "mapped_max_win": 1.6,
+      "observed_max_win": 1.6,
+      "weights_sum": 1000,
+      "books_len": 1000,
+      "consistency_pass": true
+    },
+    {
+      "mode_id": "coral_reef",
+      "cost": 1.0,
+      "theoretical_rtp": 0.96,
+      "lookup_rtp": 0.9935999999999999,
+      "lookup_rtp_delta": 0.03359999999999996,
+      "theoretical_std": 1.1757550765359255,
+      "lookup_std": 1.1821163394522554,
+      "lookup_std_error": 0.0371806401235912,
+      "lookup_drift_sigma": 0.903696114115063,
+      "configured_max_win": 2.4,
+      "mapped_max_win": 2.4,
+      "observed_max_win": 2.4,
+      "weights_sum": 1000,
+      "books_len": 1000,
+      "consistency_pass": true
+    },
+    {
+      "mode_id": "storm_route",
+      "cost": 1.0,
+      "theoretical_rtp": 0.96,
+      "lookup_rtp": 1.04448,
+      "lookup_rtp_delta": 0.08448000000000011,
+      "theoretical_std": 1.6627687752661222,
+      "lookup_std": 1.708761168098105,
+      "lookup_std_error": 0.05258136552049595,
+      "lookup_drift_sigma": 1.6066528353484892,
+      "configured_max_win": 3.84,
+      "mapped_max_win": 3.84,
+      "observed_max_win": 3.84,
+      "weights_sum": 1000,
+      "books_len": 1000,
+      "consistency_pass": true
+    },
+    {
+      "mode_id": "skull_island",
+      "cost": 1.0,
+      "theoretical_rtp": 0.96,
+      "lookup_rtp": 1.056,
+      "lookup_rtp_delta": 0.09600000000000009,
+      "theoretical_std": 2.8800000000000003,
+      "lookup_std": 3.003741666655107,
+      "lookup_std_error": 0.09107359661284933,
+      "lookup_drift_sigma": 1.0540925533894605,
+      "configured_max_win": 9.6,
+      "mapped_max_win": 9.6,
+      "observed_max_win": 9.6,
+      "weights_sum": 1000,
+      "books_len": 1000,
+      "consistency_pass": true
+    },
+    {
+      "mode_id": "kraken_waters",
+      "cost": 1.0,
+      "theoretical_rtp": 0.96,
+      "lookup_rtp": 1.1136,
+      "lookup_rtp_delta": 0.15359999999999996,
+      "theoretical_std": 4.184542985799046,
+      "lookup_std": 4.487874222836464,
+      "lookup_std_error": 0.13232686802006613,
+      "lookup_drift_sigma": 1.1607620001760184,
+      "configured_max_win": 19.2,
+      "mapped_max_win": 19.2,
+      "observed_max_win": 19.2,
+      "weights_sum": 1000,
+      "books_len": 1000,
+      "consistency_pass": true
+    },
+    {
+      "mode_id": "lost_treasure",
+      "cost": 1.0,
+      "theoretical_rtp": 0.96,
+      "lookup_rtp": 0.864,
+      "lookup_rtp_delta": -0.09599999999999997,
+      "theoretical_std": 9.551879396223553,
+      "lookup_std": 9.066283913489583,
+      "lookup_std_error": 0.2135865164283551,
+      "lookup_drift_sigma": -0.4494665749754946,
+      "configured_max_win": 96.0,
+      "mapped_max_win": 96.0,
+      "observed_max_win": 96.0,
+      "weights_sum": 2000,
+      "books_len": 2000,
+      "consistency_pass": true
+    },
+    {
+      "mode_id": "treasure_hunt_buy",
+      "cost": 100.0,
+      "theoretical_rtp": 0.96,
+      "lookup_rtp": 0.9340999999999999,
+      "lookup_rtp_delta": -0.025900000000000034,
+      "theoretical_std": 75.1398695766768,
+      "lookup_std": 75.57295746495568,
+      "lookup_std_error": 0.02376131309502907,
+      "lookup_drift_sigma": -1.0900071008878034,
+      "configured_max_win": 275.0,
+      "mapped_max_win": 275.0,
+      "observed_max_win": 275.0,
+      "weights_sum": 1000,
+      "books_len": 1000,
+      "consistency_pass": true
+    }
+  ],
+  "monte_carlo": [
+    {
+      "mode_id": "safe_shore",
+      "rounds": 1000000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 0.9599039999866862,
+      "drift": -9.60000133137795e-05,
+      "std_error": 0.00048,
+      "z_score": -0.20000002773704062
+    },
+    {
+      "mode_id": "hidden_bay",
+      "rounds": 1000000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 0.9608655999905055,
+      "drift": 0.0008655999905055056,
+      "std_error": 0.000783836717690617,
+      "z_score": 1.1043116135919022
+    },
+    {
+      "mode_id": "coral_reef",
+      "rounds": 1000000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 0.9627336000063478,
+      "drift": 0.002733600006347814,
+      "std_error": 0.0011757550765359255,
+      "z_score": 2.324974019590625
+    },
+    {
+      "mode_id": "storm_route",
+      "rounds": 1000000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 0.9605567999978376,
+      "drift": 0.0005567999978376426,
+      "std_error": 0.0016627687752661221,
+      "z_score": 0.33486315482952705
+    },
+    {
+      "mode_id": "skull_island",
+      "rounds": 1000000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 0.9534815999984355,
+      "drift": -0.0065184000015644505,
+      "std_error": 0.00288,
+      "z_score": -2.2633333338765453
+    },
+    {
+      "mode_id": "kraken_waters",
+      "rounds": 1000000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 0.958636799999171,
+      "drift": -0.0013632000008290124,
+      "std_error": 0.004184542985799046,
+      "z_score": -0.32577034229431073
+    },
+    {
+      "mode_id": "lost_treasure",
+      "rounds": 1000000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 0.964224,
+      "drift": 0.0042240000000000055,
+      "std_error": 0.009551879396223553,
+      "z_score": 0.4422166387140538
+    },
+    {
+      "mode_id": "treasure_hunt_buy",
+      "rounds": 1000000,
+      "theoretical_rtp": 0.96,
+      "simulated_rtp": 0.9599439,
+      "drift": -5.610000000000337e-05,
+      "std_error": 0.000751398695766768,
+      "z_score": -0.07466076307566104
+    }
+  ],
+  "overall": {
+    "all_mode_consistent": true,
+    "monte_carlo_within_5sigma": true,
+    "docs_present": true,
+    "no_broken_markdown_links": true,
+    "pass": true
+  }
+}

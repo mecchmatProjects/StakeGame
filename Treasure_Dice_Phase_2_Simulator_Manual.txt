@@ -1,0 +1,166 @@
+Treasure Dice Phase 2 Simulator Manual
+======================================
+
+1) Purpose
+----------
+This manual describes how to run the Phase 2 Treasure Hunt Bonus Buy simulator.
+The simulator models the approved Candidate A and Candidate B discrete bonus
+distributions from the Phase 2 bonus report.
+
+Scope in this script:
+- Phase 2 bonus-buy rounds only.
+- Cost model fixed to 100x base bet per bonus round.
+- Candidate A and Candidate B weighted outcome simulation.
+- Full per-round logs and JSON report output.
+- Optional summary-only mode for large convergence runs.
+- Optional CSV export for spreadsheet ingestion.
+
+Out of scope:
+- Phase 1 regular-route simulation.
+- Stake Engine SDK packaging/export work.
+- Any unapproved candidate table changes.
+
+
+2) Script
+---------
+Script file:
+- treasure_dice_phase2_simulator.py
+
+
+3) Candidate Definitions
+------------------------
+Candidate A outcomes (weight/probability/payout/event_count):
+- A1: 18 / 0.18 / 0x / 3
+- A2: 22 / 0.22 / 50x / 3
+- A3: 22 / 0.22 / 90x / 4
+- A4: 18 / 0.18 / 120x / 4
+- A5: 12 / 0.12 / 180x / 5
+- A6:  8 / 0.08 / 275x / 6
+
+Candidate B outcomes (weight/probability/payout/event_count):
+- B1: 46 / 0.46 / 0x / 3
+- B2: 18 / 0.18 / 60x / 3
+- B3: 10 / 0.10 / 100x / 4
+- B4: 12 / 0.12 / 180x / 5
+- B5:  9 / 0.09 / 320x / 6
+- B6:  5 / 0.05 / 496x / 7
+
+All probabilities are normalized and sum to 1.0 per candidate.
+
+
+4) Core Formulas
+----------------
+Let B be base bet and C = 100 * B be bonus cost.
+
+Per-round values:
+- payout = B * payout_multiplier
+- payout_vs_cost = payout_multiplier / 100
+- net_profit = payout - C
+
+Theoretical candidate metrics:
+- E[X] = sum(p_i * x_i)
+- theoretical_rtp = E[X] / 100
+- variance = sum(p_i * x_i^2) - (E[X])^2
+- standard_deviation = sqrt(variance)
+
+Simulation aggregates:
+- total_wager = rounds * C
+- total_payout = sum(round payouts)
+- simulated_rtp = total_payout / total_wager
+
+
+5) CLI Arguments
+----------------
+Required:
+- none (all have defaults)
+
+Optional:
+- --mode {single,compare}
+  - single: simulate one candidate (default)
+  - compare: simulate A and B in one run and write one combined report
+- --candidate {A,B}
+  - used when mode=single (default A)
+- --rounds INT
+  - number of bonus rounds (must be > 0)
+- --base-bet FLOAT
+  - base bet amount (must be > 0)
+- --seed INT
+  - deterministic RNG seed
+- --report-file PATH
+  - output JSON report path
+- --log-file PATH
+  - output log file path
+- --log-level {DEBUG,INFO,WARNING,ERROR}
+- --record-mode {full,summary}
+  - full: include round_records in JSON
+  - summary: omit round_records to keep files small for large runs
+- --csv-prefix PATH
+  - optional CSV output prefix (writes summary/outcomes and compare table files)
+
+
+6) Usage Examples
+-----------------
+Single-candidate run (A):
+python .\treasure_dice_phase2_simulator.py --mode single --candidate A --rounds 100000 --seed 42 --report-file .\phase2_A_report.json --log-file .\phase2_A.log
+
+Single-candidate run (B):
+python .\treasure_dice_phase2_simulator.py --mode single --candidate B --rounds 100000 --seed 42 --report-file .\phase2_B_report.json --log-file .\phase2_B.log
+
+Compare mode (A and B together):
+python .\treasure_dice_phase2_simulator.py --mode compare --rounds 100000 --seed 42 --report-file .\phase2_compare_report.json --log-file .\phase2_compare.log
+
+Long convergence run (A, summary-only + CSV):
+python .\treasure_dice_phase2_simulator.py --mode single --candidate A --rounds 1000000 --seed 20260603 --record-mode summary --report-file .\phase2_A_1m.json --log-file .\phase2_A_1m.log --csv-prefix .\phase2_A_1m --log-level ERROR
+
+Long convergence run (compare, summary-only + CSV):
+python .\treasure_dice_phase2_simulator.py --mode compare --rounds 1000000 --seed 20260603 --record-mode summary --report-file .\phase2_compare_1m.json --log-file .\phase2_compare_1m.log --csv-prefix .\phase2_compare_1m --log-level ERROR
+
+
+7) Output Artifacts
+-------------------
+Log file:
+- Timestamped per-round lines including draw, selected outcome, payout,
+  payout_vs_cost, net, and cumulative RTP.
+
+JSON report in single mode includes:
+- candidate metadata and theoretical metrics
+- simulation totals and simulated RTP
+- round_records list with full round-by-round detail (record-mode=full)
+- round_records_omitted=true marker (record-mode=summary)
+- outcome_summaries with theoretical vs simulated frequency
+
+JSON report in compare mode includes:
+- candidate_reports.A (full single-mode report for A)
+- candidate_reports.B (full single-mode report for B)
+- comparison_summary with side-by-side RTP, variance, max win, zero rate,
+  and profit rate
+
+CSV outputs when --csv-prefix is provided:
+- Single mode:
+  - <prefix>_summary.csv
+  - <prefix>_outcomes.csv
+  - <prefix>_rounds.csv (only when record-mode=full)
+- Compare mode:
+  - <prefix>_comparison.csv
+  - <prefix>_candidate_A_summary.csv
+  - <prefix>_candidate_A_outcomes.csv
+  - <prefix>_candidate_A_rounds.csv (only when record-mode=full)
+  - <prefix>_candidate_B_summary.csv
+  - <prefix>_candidate_B_outcomes.csv
+  - <prefix>_candidate_B_rounds.csv (only when record-mode=full)
+
+
+8) Validation Notes
+-------------------
+- For large rounds, simulated RTP should converge toward theoretical RTP (0.96).
+- Short runs can deviate significantly due to variance.
+- Compare mode uses seed for A and seed+1 for B, so both streams are deterministic
+  and reproducible.
+
+
+9) Limitations
+--------------
+- This is a discrete-outcome model, not a full engine-state simulation.
+- Event sequence is a deterministic presentation placeholder derived from
+  event_count; it is not a full step-by-step game-logic replay.
+- Cost multiplier is fixed to 100x base bet as defined in Phase 2.

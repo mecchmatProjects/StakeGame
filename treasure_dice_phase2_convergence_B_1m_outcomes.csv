@@ -1,0 +1,7 @@
+outcome_id,weight,theoretical_probability,simulated_probability,payout_multiplier,payout_vs_cost,event_count,notes
+B1,46,0.46,0.460508,0.0,0.0,3,"Full miss, highest zero rate."
+B2,18,0.18,0.180304,60.0,0.6,3,Low-value recovery.
+B3,10,0.1,0.099407,100.0,1.0,4,Break-even outcome.
+B4,12,0.12,0.119752,180.0,1.8,5,Mid-tier profitable path.
+B5,9,0.09,0.089669,320.0,3.2,6,High-tier profitable path.
+B6,5,0.05,0.05036,496.0,4.96,7,Top tier for Candidate B.

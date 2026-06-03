@@ -1,0 +1,518 @@
+{
+  "phase": 2,
+  "feature_scope": "bonus buy candidate comparison",
+  "mode": "compare",
+  "rounds_per_candidate": 6,
+  "base_bet": 1.0,
+  "bonus_cost_multiplier": 100.0,
+  "seed": 21,
+  "seed_policy": {
+    "A": 21,
+    "B": 22
+  },
+  "candidate_reports": {
+    "A": {
+      "phase": 2,
+      "feature_scope": "bonus buy candidate simulation only",
+      "candidate_id": "A",
+      "recommended_candidate": true,
+      "candidate_summary_note": "Recommended candidate with lower volatility and tighter exposure.",
+      "rounds": 6,
+      "base_bet": 1.0,
+      "bonus_cost_multiplier": 100.0,
+      "bonus_cost": 100.0,
+      "seed": 21,
+      "theoretical_rtp_target": 0.96,
+      "theoretical_rtp": 0.96,
+      "expected_payout_multiplier": 96.0,
+      "theoretical_hit_rate": 0.82,
+      "theoretical_zero_rate": 0.18,
+      "theoretical_below_cost_rate": 0.44,
+      "theoretical_profit_rate": 0.38,
+      "theoretical_break_even_rate": 0.0,
+      "median_multiplier": 90.0,
+      "p95_multiplier": 275.0,
+      "p99_multiplier": 275.0,
+      "variance": 5646.0,
+      "standard_deviation": 75.13987,
+      "max_win_multiplier": 275.0,
+      "total_wager": 600.0,
+      "total_payout": 500.0,
+      "total_net_profit": -100.0,
+      "simulated_rtp": 0.833333,
+      "round_records": [
+        {
+          "round_number": 1,
+          "candidate_id": "A",
+          "base_bet": 1.0,
+          "cost_multiplier": 100.0,
+          "bonus_cost": 100.0,
+          "draw": 0.164949,
+          "outcome_id": "A1",
+          "outcome_probability": 0.18,
+          "payout_multiplier": 0.0,
+          "payout": 0.0,
+          "payout_vs_cost": 0.0,
+          "net_profit": -100.0,
+          "event_count": 3,
+          "event_sequence": [
+            "bonus_step",
+            "bonus_step",
+            "bonus_complete"
+          ],
+          "cumulative_wager": 100.0,
+          "cumulative_payout": 0.0,
+          "cumulative_rtp": 0.0
+        },
+        {
+          "round_number": 2,
+          "candidate_id": "A",
+          "base_bet": 1.0,
+          "cost_multiplier": 100.0,
+          "bonus_cost": 100.0,
+          "draw": 0.689767,
+          "outcome_id": "A4",
+          "outcome_probability": 0.18,
+          "payout_multiplier": 120.0,
+          "payout": 120.0,
+          "payout_vs_cost": 1.2,
+          "net_profit": 20.0,
+          "event_count": 4,
+          "event_sequence": [
+            "bonus_step",
+            "bonus_step",
+            "bonus_step",
+            "bonus_complete"
+          ],
+          "cumulative_wager": 200.0,
+          "cumulative_payout": 120.0,
+          "cumulative_rtp": 0.6
+        },
+        {
+          "round_number": 3,
+          "candidate_id": "A",
+          "base_bet": 1.0,
+          "cost_multiplier": 100.0,
+          "bonus_cost": 100.0,
+          "draw": 0.635,
+          "outcome_id": "A4",
+          "outcome_probability": 0.18,
+          "payout_multiplier": 120.0,
+          "payout": 120.0,
+          "payout_vs_cost": 1.2,
+          "net_profit": 20.0,
+          "event_count": 4,
+          "event_sequence": [
+            "bonus_step",
+            "bonus_step",
+            "bonus_step",
+            "bonus_complete"
+          ],
+          "cumulative_wager": 300.0,
+          "cumulative_payout": 240.0,
+          "cumulative_rtp": 0.8
+        },
+        {
+          "round_number": 4,
+          "candidate_id": "A",
+          "base_bet": 1.0,
+          "cost_multiplier": 100.0,
+          "bonus_cost": 100.0,
+          "draw": 0.4791,
+          "outcome_id": "A3",
+          "outcome_probability": 0.22,
+          "payout_multiplier": 90.0,
+          "payout": 90.0,
+          "payout_vs_cost": 0.9,
+          "net_profit": -10.0,
+          "event_count": 4,
+          "event_sequence": [
+            "bonus_step",
+            "bonus_step",
+            "bonus_step",
+            "bonus_complete"
+          ],
+          "cumulative_wager": 400.0,
+          "cumulative_payout": 330.0,
+          "cumulative_rtp": 0.825
+        },
+        {
+          "round_number": 5,
+          "candidate_id": "A",
+          "base_bet": 1.0,
+          "cost_multiplier": 100.0,
+          "bonus_cost": 100.0,
+          "draw": 0.216014,
+          "outcome_id": "A2",
+          "outcome_probability": 0.22,
+          "payout_multiplier": 50.0,
+          "payout": 50.0,
+          "payout_vs_cost": 0.5,
+          "net_profit": -50.0,
+          "event_count": 3,
+          "event_sequence": [
+            "bonus_step",
+            "bonus_step",
+            "bonus_complete"
+          ],
+          "cumulative_wager": 500.0,
+          "cumulative_payout": 380.0,
+          "cumulative_rtp": 0.76
+        },
+        {
+          "round_number": 6,
+          "candidate_id": "A",
+          "base_bet": 1.0,
+          "cost_multiplier": 100.0,
+          "bonus_cost": 100.0,
+          "draw": 0.792633,
+          "outcome_id": "A4",
+          "outcome_probability": 0.18,
+          "payout_multiplier": 120.0,
+          "payout": 120.0,
+          "payout_vs_cost": 1.2,
+          "net_profit": 20.0,
+          "event_count": 4,
+          "event_sequence": [
+            "bonus_step",
+            "bonus_step",
+            "bonus_step",
+            "bonus_complete"
+          ],
+          "cumulative_wager": 600.0,
+          "cumulative_payout": 500.0,
+          "cumulative_rtp": 0.833333
+        }
+      ],
+      "outcome_summaries": [
+        {
+          "outcome_id": "A1",
+          "weight": 18,
+          "theoretical_probability": 0.18,
+          "simulated_probability": 0.166667,
+          "payout_multiplier": 0.0,
+          "payout_vs_cost": 0.0,
+          "event_count": 3,
+          "notes": "Full miss, short reveal path."
+        },
+        {
+          "outcome_id": "A2",
+          "weight": 22,
+          "theoretical_probability": 0.22,
+          "simulated_probability": 0.166667,
+          "payout_multiplier": 50.0,
+          "payout_vs_cost": 0.5,
+          "event_count": 3,
+          "notes": "Low chest recovery outcome."
+        },
+        {
+          "outcome_id": "A3",
+          "weight": 22,
+          "theoretical_probability": 0.22,
+          "simulated_probability": 0.166667,
+          "payout_multiplier": 90.0,
+          "payout_vs_cost": 0.9,
+          "event_count": 4,
+          "notes": "Near break-even path."
+        },
+        {
+          "outcome_id": "A4",
+          "weight": 18,
+          "theoretical_probability": 0.18,
+          "simulated_probability": 0.5,
+          "payout_multiplier": 120.0,
+          "payout_vs_cost": 1.2,
+          "event_count": 4,
+          "notes": "First profitable tier."
+        },
+        {
+          "outcome_id": "A5",
+          "weight": 12,
+          "theoretical_probability": 0.12,
+          "simulated_probability": 0.0,
+          "payout_multiplier": 180.0,
+          "payout_vs_cost": 1.8,
+          "event_count": 5,
+          "notes": "Mid-tier profitable path."
+        },
+        {
+          "outcome_id": "A6",
+          "weight": 8,
+          "theoretical_probability": 0.08,
+          "simulated_probability": 0.0,
+          "payout_multiplier": 275.0,
+          "payout_vs_cost": 2.75,
+          "event_count": 6,
+          "notes": "Top tier for Candidate A."
+        }
+      ]
+    },
+    "B": {
+      "phase": 2,
+      "feature_scope": "bonus buy candidate simulation only",
+      "candidate_id": "B",
+      "recommended_candidate": false,
+      "candidate_summary_note": "Higher-volatility alternative with a wider tail and larger max win.",
+      "rounds": 6,
+      "base_bet": 1.0,
+      "bonus_cost_multiplier": 100.0,
+      "bonus_cost": 100.0,
+      "seed": 22,
+      "theoretical_rtp_target": 0.96,
+      "theoretical_rtp": 0.96,
+      "expected_payout_multiplier": 96.0,
+      "theoretical_hit_rate": 0.54,
+      "theoretical_zero_rate": 0.46,
+      "theoretical_below_cost_rate": 0.18,
+      "theoretical_profit_rate": 0.26,
+      "theoretical_break_even_rate": 0.1,
+      "median_multiplier": 60.0,
+      "p95_multiplier": 320.0,
+      "p99_multiplier": 496.0,
+      "variance": 17836.8,
+      "standard_deviation": 133.554483,
+      "max_win_multiplier": 496.0,
+      "total_wager": 600.0,
+      "total_payout": 992.0,
+      "total_net_profit": 392.0,
+      "simulated_rtp": 1.653333,
+      "round_records": [
+        {
+          "round_number": 1,
+          "candidate_id": "B",
+          "base_bet": 1.0,
+          "cost_multiplier": 100.0,
+          "bonus_cost": 100.0,
+          "draw": 0.958209,
+          "outcome_id": "B6",
+          "outcome_probability": 0.05,
+          "payout_multiplier": 496.0,
+          "payout": 496.0,
+          "payout_vs_cost": 4.96,
+          "net_profit": 396.0,
+          "event_count": 7,
+          "event_sequence": [
+            "bonus_step",
+            "bonus_step",
+            "bonus_step",
+            "bonus_step",
+            "bonus_step",
+            "bonus_step",
+            "bonus_complete"
+          ],
+          "cumulative_wager": 100.0,
+          "cumulative_payout": 496.0,
+          "cumulative_rtp": 4.96
+        },
+        {
+          "round_number": 2,
+          "candidate_id": "B",
+          "base_bet": 1.0,
+          "cost_multiplier": 100.0,
+          "bonus_cost": 100.0,
+          "draw": 0.140369,
+          "outcome_id": "B1",
+          "outcome_probability": 0.46,
+          "payout_multiplier": 0.0,
+          "payout": 0.0,
+          "payout_vs_cost": 0.0,
+          "net_profit": -100.0,
+          "event_count": 3,
+          "event_sequence": [
+            "bonus_step",
+            "bonus_step",
+            "bonus_complete"
+          ],
+          "cumulative_wager": 200.0,
+          "cumulative_payout": 496.0,
+          "cumulative_rtp": 2.48
+        },
+        {
+          "round_number": 3,
+          "candidate_id": "B",
+          "base_bet": 1.0,
+          "cost_multiplier": 100.0,
+          "bonus_cost": 100.0,
+          "draw": 0.023616,
+          "outcome_id": "B1",
+          "outcome_probability": 0.46,
+          "payout_multiplier": 0.0,
+          "payout": 0.0,
+          "payout_vs_cost": 0.0,
+          "net_profit": -100.0,
+          "event_count": 3,
+          "event_sequence": [
+            "bonus_step",
+            "bonus_step",
+            "bonus_complete"
+          ],
+          "cumulative_wager": 300.0,
+          "cumulative_payout": 496.0,
+          "cumulative_rtp": 1.653333
+        },
+        {
+          "round_number": 4,
+          "candidate_id": "B",
+          "base_bet": 1.0,
+          "cost_multiplier": 100.0,
+          "bonus_cost": 100.0,
+          "draw": 0.998631,
+          "outcome_id": "B6",
+          "outcome_probability": 0.05,
+          "payout_multiplier": 496.0,
+          "payout": 496.0,
+          "payout_vs_cost": 4.96,
+          "net_profit": 396.0,
+          "event_count": 7,
+          "event_sequence": [
+            "bonus_step",
+            "bonus_step",
+            "bonus_step",
+            "bonus_step",
+            "bonus_step",
+            "bonus_step",
+            "bonus_complete"
+          ],
+          "cumulative_wager": 400.0,
+          "cumulative_payout": 992.0,
+          "cumulative_rtp": 2.48
+        },
+        {
+          "round_number": 5,
+          "candidate_id": "B",
+          "base_bet": 1.0,
+          "cost_multiplier": 100.0,
+          "bonus_cost": 100.0,
+          "draw": 0.184254,
+          "outcome_id": "B1",
+          "outcome_probability": 0.46,
+          "payout_multiplier": 0.0,
+          "payout": 0.0,
+          "payout_vs_cost": 0.0,
+          "net_profit": -100.0,
+          "event_count": 3,
+          "event_sequence": [
+            "bonus_step",
+            "bonus_step",
+            "bonus_complete"
+          ],
+          "cumulative_wager": 500.0,
+          "cumulative_payout": 992.0,
+          "cumulative_rtp": 1.984
+        },
+        {
+          "round_number": 6,
+          "candidate_id": "B",
+          "base_bet": 1.0,
+          "cost_multiplier": 100.0,
+          "bonus_cost": 100.0,
+          "draw": 0.120592,
+          "outcome_id": "B1",
+          "outcome_probability": 0.46,
+          "payout_multiplier": 0.0,
+          "payout": 0.0,
+          "payout_vs_cost": 0.0,
+          "net_profit": -100.0,
+          "event_count": 3,
+          "event_sequence": [
+            "bonus_step",
+            "bonus_step",
+            "bonus_complete"
+          ],
+          "cumulative_wager": 600.0,
+          "cumulative_payout": 992.0,
+          "cumulative_rtp": 1.653333
+        }
+      ],
+      "outcome_summaries": [
+        {
+          "outcome_id": "B1",
+          "weight": 46,
+          "theoretical_probability": 0.46,
+          "simulated_probability": 0.666667,
+          "payout_multiplier": 0.0,
+          "payout_vs_cost": 0.0,
+          "event_count": 3,
+          "notes": "Full miss, highest zero rate."
+        },
+        {
+          "outcome_id": "B2",
+          "weight": 18,
+          "theoretical_probability": 0.18,
+          "simulated_probability": 0.0,
+          "payout_multiplier": 60.0,
+          "payout_vs_cost": 0.6,
+          "event_count": 3,
+          "notes": "Low-value recovery."
+        },
+        {
+          "outcome_id": "B3",
+          "weight": 10,
+          "theoretical_probability": 0.1,
+          "simulated_probability": 0.0,
+          "payout_multiplier": 100.0,
+          "payout_vs_cost": 1.0,
+          "event_count": 4,
+          "notes": "Break-even outcome."
+        },
+        {
+          "outcome_id": "B4",
+          "weight": 12,
+          "theoretical_probability": 0.12,
+          "simulated_probability": 0.0,
+          "payout_multiplier": 180.0,
+          "payout_vs_cost": 1.8,
+          "event_count": 5,
+          "notes": "Mid-tier profitable path."
+        },
+        {
+          "outcome_id": "B5",
+          "weight": 9,
+          "theoretical_probability": 0.09,
+          "simulated_probability": 0.0,
+          "payout_multiplier": 320.0,
+          "payout_vs_cost": 3.2,
+          "event_count": 6,
+          "notes": "High-tier profitable path."
+        },
+        {
+          "outcome_id": "B6",
+          "weight": 5,
+          "theoretical_probability": 0.05,
+          "simulated_probability": 0.333333,
+          "payout_multiplier": 496.0,
+          "payout_vs_cost": 4.96,
+          "event_count": 7,
+          "notes": "Top tier for Candidate B."
+        }
+      ]
+    }
+  },
+  "comparison_summary": {
+    "recommended_candidate": "A",
+    "simulated_rtp": {
+      "A": 0.833333,
+      "B": 1.653333
+    },
+    "theoretical_rtp": {
+      "A": 0.96,
+      "B": 0.96
+    },
+    "variance": {
+      "A": 5646.0,
+      "B": 17836.8
+    },
+    "max_win_multiplier": {
+      "A": 275.0,
+      "B": 496.0
+    },
+    "zero_rate": {
+      "A": 0.18,
+      "B": 0.46
+    },
+    "profit_rate": {
+      "A": 0.38,
+      "B": 0.26
+    }
+  }
+}
