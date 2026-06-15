@@ -1,0 +1,379 @@
+Treasure Dice From Scratch Build Manual
+Version: 1.0
+Date: 2026-06-04
+Authoring context: Stake Engine Math SDK static outcome packaging in this workspace
+
+====================================================================
+1) PURPOSE
+====================================================================
+This manual explains, from scratch, how the Treasure Dice package artifacts and mathematician deliverables were produced in this workspace.
+
+It covers:
+- Full production of section 13 publication artifacts.
+- Full assembly of section 16 expected deliverables.
+- Math SDK structure explanation with references to official docs in this repository.
+- Reproducible command-by-command workflow and validation checkpoints.
+
+Primary input specification:
+- Game_Description.md
+
+Primary output package:
+- math-sdk/games/treasure_dice/final_delivery_package/
+
+====================================================================
+2) DOCUMENTATION REFERENCES (MATH SDK)
+====================================================================
+Use these docs while following this manual:
+
+1. Math SDK entry overview:
+   - math-sdk/docs/math_home.md
+
+2. Repository structure and component breakdown:
+   - math-sdk/docs/math_docs/directory.md
+
+3. RGS and monetary precision rules:
+   - math-sdk/docs/rgs_docs/RGS.md
+   Important point used in this workflow:
+   - Stake Engine money is integer with six decimal places of precision.
+
+4. Books JSONL formatting behavior:
+   - math-sdk/docs/books_formatting.md
+
+5. Treasure Dice game scaffold readme:
+   - math-sdk/games/treasure_dice/readme.txt
+
+====================================================================
+3) FINAL TARGETS
+====================================================================
+Section 13 targets:
+- configs for seven regular routes and one bonus mode.
+- index.json.
+- lookup tables.
+- compressed books files.
+- mapping and event config files for RGS.
+- max win metadata.
+- confirmed RTP evidence.
+- simulation report.
+
+Section 16 targets:
+1. Final math report with model version.
+2. Stake Engine Math SDK package for eight modes.
+3. Approved regular routes paytable.
+4. Approved Bonus Buy paytable and Treasure Hunt description.
+5. index + lookup + compressed outcomes.
+6. Max win multiplier for each mode.
+7. Simulation report.
+8. Volatility report.
+9. Precision and rounding rules.
+10. Exposure table (cap-dependent).
+11. Presentation event mapping.
+12. Brief risk assessment.
+
+====================================================================
+4) WORKSPACE PREPARATION
+====================================================================
+Open root:
+- f:/Gaming/Stakes
+
+Verify required roots exist:
+- Game_Description.md
+- treasure_dice_phase3_mapping_spec.json
+- math-sdk/
+- math-sdk/games/treasure_dice/
+
+PowerShell check example:
+- Test-Path .\Game_Description.md
+- Test-Path .\treasure_dice_phase3_mapping_spec.json
+- Test-Path .\math-sdk\games\treasure_dice\run.py
+
+====================================================================
+5) MATH SDK STRUCTURE EXPLANATION (PRACTICAL)
+====================================================================
+This section maps what you edit and what the engine generates.
+
+A) Game-specific code (edit here for this game)
+- math-sdk/games/treasure_dice/game_config.py
+  Purpose:
+  - Defines game_id, RTP, BetModes, distributions, max win logic.
+  - Loads mapping spec from treasure_dice_phase3_mapping_spec.json.
+
+- math-sdk/games/treasure_dice/gamestate.py
+  Purpose:
+  - Implements deterministic outcome selection and event emission.
+
+- math-sdk/games/treasure_dice/game_events.py
+  Purpose:
+  - Builds ordered event payloads used in books and replay.
+
+- math-sdk/games/treasure_dice/run.py
+  Purpose:
+  - Entry point for simulation generation.
+  - Calls create_books and generate_configs.
+
+B) Shared engine internals (usually do not edit for game delivery)
+- math-sdk/src/config/
+- math-sdk/src/state/
+- math-sdk/src/write_data/
+- math-sdk/src/events/
+Reference:
+- math-sdk/docs/math_docs/directory.md
+
+C) Generated artifact areas
+- math-sdk/games/treasure_dice/library/configs/
+- math-sdk/games/treasure_dice/library/publish_files/
+- math-sdk/games/treasure_dice/library/lookup_tables/
+- math-sdk/games/treasure_dice/library/books/
+
+These are generated outputs consumed by publication packaging steps.
+
+====================================================================
+6) IMPLEMENT TREASURE DICE GAME LOGIC (FROM SPEC)
+====================================================================
+Source truth used:
+- Game_Description.md (math and requirements)
+- treasure_dice_phase3_mapping_spec.json (deterministic outcome/event mapping)
+
+Implementation requirements:
+1. Eight modes:
+   - safe_shore
+   - hidden_bay
+   - coral_reef
+   - storm_route
+   - skull_island
+   - kraken_waters
+   - lost_treasure
+   - treasure_hunt_buy
+
+2. Costs:
+   - seven regular modes: cost 1
+   - bonus mode: cost 100
+
+3. Target RTP in config:
+   - 0.96 for all modes
+
+4. Deterministic mapping:
+   - mode + selected outcome determines payout and event sequence.
+
+Code locations used:
+- math-sdk/games/treasure_dice/game_config.py
+- math-sdk/games/treasure_dice/gamestate.py
+- math-sdk/games/treasure_dice/game_events.py
+
+====================================================================
+7) GENERATE SECTION 13 CORE ARTIFACTS
+====================================================================
+From workspace root:
+- cd f:/Gaming/Stakes/math-sdk
+
+Run package generation:
+- python games/treasure_dice/run.py
+
+If zstandard is missing, install it first in your active Python environment:
+- python -m pip install zstandard
+
+What this generation produces:
+- library/configs/*.json
+- library/publish_files/index.json
+- library/publish_files/lookUpTable_*_0.csv
+- library/publish_files/books_*.jsonl.zst
+
+Post-run verification examples:
+- Get-ChildItem .\games\treasure_dice\library\publish_files
+- Get-Content .\games\treasure_dice\library\publish_files\index.json
+
+Required checks at this stage:
+1. index.json contains all 8 modes.
+2. Each mode has one books file and one lookup table.
+3. config_fe_treasure_dice.json includes costs and max_win per mode.
+
+====================================================================
+8) VALIDATE MATH PACKAGE CONSISTENCY
+====================================================================
+Validation assets used:
+- treasure_dice_phase5_validate.py
+- treasure_dice_phase5_validation_summary.json
+- Treasure_Dice_Phase_5_Final_Validation_Summary.md
+- Treasure_Dice_Phase_5_Replay_Audit_Report.md
+
+Expected validation themes:
+- weight integrity
+- lookup to books consistency
+- max win bounds
+- replay determinism
+- small-bet rounding policy coverage
+
+Money policy used for final closure:
+- Stake Engine six-decimal settlement precision
+Reference:
+- math-sdk/docs/rgs_docs/RGS.md
+
+====================================================================
+9) CREATE PUBLICATION BUNDLE (SECTION 13 VIEW)
+====================================================================
+Create:
+- math-sdk/games/treasure_dice/publication_package/
+
+Populate with:
+A) configs from library/configs
+B) publish files from library/publish_files
+C) mapping spec copy
+D) docs for validation and simulation evidence
+
+Final publication bundle manifest:
+- math-sdk/games/treasure_dice/publication_package/README.md
+
+This README records closure for sections 11, 12, and 13.
+
+====================================================================
+10) PRODUCE SECTION 16 DELIVERABLE DOCUMENTS
+====================================================================
+Create these explicit deliverable docs at root:
+- Treasure_Dice_Final_Math_Report.md
+- Treasure_Dice_Approved_Regular_Routes_Paytable.md
+- Treasure_Dice_Approved_Bonus_Buy_Paytable.md
+- Treasure_Dice_Exposure_Table_Pending_Operator_Cap.md
+
+Why these were created:
+- Section 16 requires explicit deliverable artifacts, not only phase notes.
+- These documents consolidate and formalize final approval outputs.
+
+Supporting docs reused:
+- Treasure_Dice_Phase_1_Math_Report.md
+- Treasure_Dice_Phase_2_Bonus_Report.md
+- Treasure_Dice_Phase_3_Event_Mapping_Report.md
+- Treasure_Dice_Phase_5_Simulation_Report.md
+- Treasure_Dice_Phase_5_Volatility_Report.md
+- Treasure_Dice_Phase_6_Precision_Rounding_And_Frontend_Contract.md
+- Treasure_Dice_Phase_6_Risk_Assessment.md
+
+====================================================================
+11) BUILD FINAL DELIVERY PACKAGE (SECTIONS 13 + 16 TOGETHER)
+====================================================================
+Create:
+- math-sdk/games/treasure_dice/final_delivery_package/
+
+Structure:
+- artifacts/configs/
+- artifacts/publish_files/
+- artifacts/mapping/
+- docs/
+- README.md
+
+Copy into artifacts:
+1. From publication bundle configs:
+   - publication_package/configs/* -> final_delivery_package/artifacts/configs/
+2. From publication bundle publish files:
+   - publication_package/publish_files/* -> final_delivery_package/artifacts/publish_files/
+3. Mapping spec:
+   - treasure_dice_mapping_spec.json -> final_delivery_package/artifacts/mapping/
+
+Copy into docs:
+- Treasure_Dice_Final_Math_Report.md
+- Treasure_Dice_Approved_Regular_Routes_Paytable.md
+- Treasure_Dice_Approved_Bonus_Buy_Paytable.md
+- Treasure_Dice_Exposure_Table_Pending_Operator_Cap.md
+- Treasure_Dice_Phase_3_Event_Mapping_Report.md
+- Treasure_Dice_Phase_5_Simulation_Report.md
+- Treasure_Dice_Phase_5_Volatility_Report.md
+- Treasure_Dice_Phase_5_Final_Validation_Summary.md
+- Treasure_Dice_Phase_6_Precision_Rounding_And_Frontend_Contract.md
+- Treasure_Dice_Phase_6_Risk_Assessment.md
+- Treasure_Dice_Phase_6_Acceptance_Checklist.md
+- Treasure_Dice_Phase_6_Publication_Status_Note.md
+- treasure_dice_phase5_validation_summary.json
+
+Final package manifest:
+- math-sdk/games/treasure_dice/final_delivery_package/README.md
+
+====================================================================
+12) UPDATE THE SOURCE SPEC WITH EXACT FILE PATHS
+====================================================================
+Update:
+- Game_Description.md
+
+Update sections:
+A) Section 13:
+- Add the exact final_delivery_package paths for each expected artifact family.
+
+B) Section 16:
+- Add a direct file or folder path for each of the 12 deliverables.
+
+Outcome:
+- The brief itself becomes traceable to concrete produced files.
+
+====================================================================
+13) FINAL VALIDATION CHECKLIST
+====================================================================
+Run these checks before handoff:
+
+1. Section 13 artifact presence
+- configs exist in final_delivery_package/artifacts/configs/
+- index exists in final_delivery_package/artifacts/publish_files/index.json
+- lookup files exist in final_delivery_package/artifacts/publish_files/lookUpTable_*_0.csv
+- books exist in final_delivery_package/artifacts/publish_files/books_*.jsonl.zst
+- mapping exists in final_delivery_package/artifacts/mapping/treasure_dice_phase3_mapping_spec.json
+
+2. Section 16 deliverables presence
+- all files listed in final_delivery_package/README.md table exist
+
+3. Policy closure presence
+- final precision and rounding policy exists in:
+  - final_delivery_package/docs/Treasure_Dice_Phase_6_Precision_Rounding_And_Frontend_Contract.md
+
+4. Risk and status presence
+- risk assessment exists
+- publication status note exists
+
+5. Source spec traceability
+- Game_Description section 13 and section 16 include final package paths
+
+====================================================================
+14) TROUBLESHOOTING
+====================================================================
+Problem: run.py fails on missing module
+Action:
+- Ensure your current directory is math-sdk before running.
+- Ensure Python environment has required dependencies.
+
+Problem: no compressed books generated
+Action:
+- Confirm compression flag in run.py is True.
+- Confirm create_books completed without runtime errors.
+
+Problem: stale lookup files survive between runs
+Action:
+- run.py contains stale publish lookup cleanup logic.
+- Re-run generation after cleanup.
+
+Problem: rounding validation disagreements
+Action:
+- Verify final policy source is RGS six-decimal settlement model.
+- Do not mix display-layer cent rounding assumptions with settlement math.
+
+====================================================================
+15) EXACT OUTPUT LOCATIONS YOU SHOULD HAND OFF
+====================================================================
+Primary handoff root:
+- math-sdk/games/treasure_dice/final_delivery_package/
+
+Primary handoff manifest:
+- math-sdk/games/treasure_dice/final_delivery_package/README.md
+
+Source brief (now path-linked):
+- Game_Description.md
+
+====================================================================
+16) AUDIT TRAIL SUMMARY OF HOW ARTIFACTS WERE OBTAINED
+====================================================================
+In sequence:
+1. Read and normalized Game_Description requirements.
+2. Implemented/verified Treasure Dice game package files under math-sdk/games/treasure_dice.
+3. Generated SDK outputs via run.py into library outputs.
+4. Validated consistency and replay outputs via phase 5 tooling and reports.
+5. Assembled publication_package for section 13 artifact visibility.
+6. Closed precision and frontend policy documentation.
+7. Authored explicit section 16 deliverable docs.
+8. Assembled final_delivery_package containing both artifact classes and deliverables.
+9. Updated Game_Description sections 13 and 16 to reference exact produced files.
+
+This is the full from-scratch path used in this workspace.

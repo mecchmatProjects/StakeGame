@@ -34,8 +34,9 @@ Phase 3 mapping is mathematically deterministic and replay-safe under the define
 1. Settlement is fixed before presentation starts.
 2. Each outcome ID maps to exactly one ordered event sequence.
 3. Presentation variants alter only visual flavor, not probabilities or payouts.
+4. Final event names are now locked by [Treasure_Dice_Phase_6_Precision_Rounding_And_Frontend_Contract.md](Treasure_Dice_Phase_6_Precision_Rounding_And_Frontend_Contract.md).
 
-Gate 3 status is `Conditional` pending final event-name sign-off with frontend/integration stakeholders.
+Gate 3 status is `Pass`.
 
 ## Deterministic Mapping Model
 
@@ -162,11 +163,11 @@ Phase 3 handoff pack artifacts:
 
 ## Gate 3 Decision
 
-- Gate 3 status: `Conditional`
+- Gate 3 status: `Pass`
 - Outcome determinism: `Pass`
 - Replay constraints: `Pass`
 - Presentation-only protection: `Pass`
-- Final event naming alignment: `Pending`
+- Final event naming alignment: `Pass`
 
 ## Recommended Next Step
 

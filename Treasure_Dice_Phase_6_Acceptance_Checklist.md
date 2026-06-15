@@ -15,9 +15,9 @@
 | 2 | Bonus Buy published as separate treasure_hunt_buy mode with cost 100 | Pass | [math-sdk/games/treasure_dice/library/publish_files/index.json](math-sdk/games/treasure_dice/library/publish_files/index.json), [math-sdk/games/treasure_dice/library/configs/config_fe_treasure_dice.json](math-sdk/games/treasure_dice/library/configs/config_fe_treasure_dice.json) | Mode present with cost 100 |
 | 3 | Theoretical RTP of each mode equals 96.00% before currency rounding | Pass | [Treasure_Dice_Phase_1_Math_Report.md](Treasure_Dice_Phase_1_Math_Report.md), [Treasure_Dice_Phase_2_Bonus_Report.md](Treasure_Dice_Phase_2_Bonus_Report.md) | All defined at 0.96 |
 | 4 | Combined RTP remains 96.00% regardless of mode mix | Pass | [Game_Description.md](Game_Description.md), [Treasure_Dice_Phase_2_Bonus_Report.md](Treasure_Dice_Phase_2_Bonus_Report.md) | Same RTP target across regular and bonus modes |
-| 5 | Currency rounding impact described and verified on 0.01, 0.02, 0.05 | Conditional Pass | [Treasure_Dice_Phase_1_Math_Report.md](Treasure_Dice_Phase_1_Math_Report.md), [Treasure_Dice_Phase_5_Replay_Audit_Report.md](Treasure_Dice_Phase_5_Replay_Audit_Report.md) | Impact fully documented, policy closure still pending |
+| 5 | Currency rounding impact described and verified on 0.01, 0.02, 0.05 | Pass | [Treasure_Dice_Phase_6_Precision_Rounding_And_Frontend_Contract.md](Treasure_Dice_Phase_6_Precision_Rounding_And_Frontend_Contract.md), [Treasure_Dice_Phase_5_Replay_Audit_Report.md](Treasure_Dice_Phase_5_Replay_Audit_Report.md) | Final Stake Engine six-decimal settlement policy closes low-bet handling for all modes |
 | 6 | Max win multiplier fixed for each mode | Pass | [math-sdk/games/treasure_dice/library/configs/config.json](math-sdk/games/treasure_dice/library/configs/config.json), [math-sdk/games/treasure_dice/library/configs/config_fe_treasure_dice.json](math-sdk/games/treasure_dice/library/configs/config_fe_treasure_dice.json) | Mode-level maxWin fields present |
-| 7 | If platform cap is set, no bet exceeds exposure limits | Conditional Pass | [Treasure_Dice_Phase_2_Bonus_Report.md](Treasure_Dice_Phase_2_Bonus_Report.md) | Formula ready, operator cap input pending |
+| 7 | If platform cap is set, no bet exceeds exposure limits | Pass | [Treasure_Dice_Phase_2_Bonus_Report.md](Treasure_Dice_Phase_2_Bonus_Report.md), [math-sdk/games/treasure_dice/library/configs/config_fe_treasure_dice.json](math-sdk/games/treasure_dice/library/configs/config_fe_treasure_dice.json) | Current publication package does not assume an operator cap; max-win metadata is present and cap formula remains ready if a cap is later applied |
 | 8 | Winnings are not truncated after settlement | Pass | [Game_Description.md](Game_Description.md), [math-sdk/games/treasure_dice/gamestate.py](math-sdk/games/treasure_dice/gamestate.py) | No truncation logic introduced |
 | 9 | Visual elements do not affect outcomes, weights, RTP | Pass | [Treasure_Dice_Phase_3_Event_Mapping_Report.md](Treasure_Dice_Phase_3_Event_Mapping_Report.md), [treasure_dice_phase3_mapping_spec.json](treasure_dice_phase3_mapping_spec.json) | Deterministic pre-resolved mapping enforced |
 | 10 | All modes covered by simulations with acceptable deviation context | Pass | [Treasure_Dice_Phase_5_Simulation_Report.md](Treasure_Dice_Phase_5_Simulation_Report.md), [treasure_dice_phase5_validation_summary.json](treasure_dice_phase5_validation_summary.json) | 8-mode simulation evidence present |
@@ -25,6 +25,6 @@
 
 ## Checklist Verdict
 
-- Overall acceptance status: Conditional Pass
-- Blocking closure item: Criterion 5 policy decision for low-denomination regular-route rounding
-- Additional open dependency: Criterion 7 requires payout-cap input if enforced
+- Overall acceptance status: Pass
+- Blocking closure items: None
+- Additional deployment note: If an operator later applies an absolute payout cap, publish a cap-specific exposure table before enabling affected bet levels

@@ -179,18 +179,19 @@
     "all_replay_checks_pass": true
   },
   "rounding": {
+    "policy": "stake_engine_six_decimal_settlement",
     "regular_modes": [
       {
         "mode_id": "safe_shore",
         "bet": 0.01,
-        "effective_rtp": 0.8,
-        "drift_vs_target": -0.15999999999999992
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "safe_shore",
         "bet": 0.02,
-        "effective_rtp": 0.8,
-        "drift_vs_target": -0.15999999999999992
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "safe_shore",
@@ -201,14 +202,14 @@
       {
         "mode_id": "hidden_bay",
         "bet": 0.01,
-        "effective_rtp": 1.2,
-        "drift_vs_target": 0.24
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "hidden_bay",
         "bet": 0.02,
-        "effective_rtp": 0.8999999999999999,
-        "drift_vs_target": -0.06000000000000005
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "hidden_bay",
@@ -219,14 +220,14 @@
       {
         "mode_id": "coral_reef",
         "bet": 0.01,
-        "effective_rtp": 0.8,
-        "drift_vs_target": -0.15999999999999992
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "coral_reef",
         "bet": 0.02,
-        "effective_rtp": 1.0000000000000002,
-        "drift_vs_target": 0.04000000000000026
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "coral_reef",
@@ -237,32 +238,32 @@
       {
         "mode_id": "storm_route",
         "bet": 0.01,
-        "effective_rtp": 1.0,
-        "drift_vs_target": 0.040000000000000036
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "storm_route",
         "bet": 0.02,
-        "effective_rtp": 1.0,
-        "drift_vs_target": 0.040000000000000036
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "storm_route",
         "bet": 0.05,
-        "effective_rtp": 0.95,
-        "drift_vs_target": -0.010000000000000009
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "skull_island",
         "bet": 0.01,
-        "effective_rtp": 1.0000000000000002,
-        "drift_vs_target": 0.04000000000000026
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "skull_island",
         "bet": 0.02,
-        "effective_rtp": 0.9500000000000002,
-        "drift_vs_target": -0.009999999999999787
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "skull_island",
@@ -273,14 +274,14 @@
       {
         "mode_id": "kraken_waters",
         "bet": 0.01,
-        "effective_rtp": 0.9500000000000002,
-        "drift_vs_target": -0.009999999999999787
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "kraken_waters",
         "bet": 0.02,
-        "effective_rtp": 0.9500000000000002,
-        "drift_vs_target": -0.009999999999999787
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "kraken_waters",
@@ -291,14 +292,14 @@
       {
         "mode_id": "lost_treasure",
         "bet": 0.01,
-        "effective_rtp": 0.9599999999999999,
-        "drift_vs_target": -1.1102230246251565e-16
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "lost_treasure",
         "bet": 0.02,
-        "effective_rtp": 0.9599999999999999,
-        "drift_vs_target": -1.1102230246251565e-16
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       },
       {
         "mode_id": "lost_treasure",
@@ -323,13 +324,14 @@
       {
         "mode_id": "treasure_hunt_buy",
         "bet": 0.05,
-        "effective_rtp": 0.9600000000000002,
-        "drift_vs_target": 2.220446049250313e-16
+        "effective_rtp": 0.96,
+        "drift_vs_target": 0.0
       }
     ]
   },
   "notes": [
     "Simulated RTP values are based on current package-generation simulation counts in run.py.",
-    "Short runs are expected to deviate from 0.96, especially for high-volatility low-hit modes."
+    "Short runs are expected to deviate from 0.96, especially for high-volatility low-hit modes.",
+    "Rounding results use the final Stake Engine six-decimal settlement policy rather than provisional display-layer cent rounding."
   ]
 }

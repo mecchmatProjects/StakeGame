@@ -13,17 +13,17 @@
 - Theoretical vs simulated reconciliation: Pass for Phase 5 package validation scope.
 - Lookup, weight, and max-win audits: Pass.
 - Replay determinism: Pass.
-- Package-level rounding checks: Conditional for regular-route low-denomination fiat-cent settlement, consistent with known Phase 1 dependency.
+- Package-level rounding checks: Pass under final Stake Engine six-decimal settlement policy documented in [Treasure_Dice_Phase_6_Precision_Rounding_And_Frontend_Contract.md](Treasure_Dice_Phase_6_Precision_Rounding_And_Frontend_Contract.md).
 
 ## Gate 5 Recommendation
 
-- Gate 5 status: Conditional Pass
+- Gate 5 status: Pass
 
 Rationale:
 
 1. Core package integrity and replay determinism checks passed.
-2. Remaining open item is the pre-existing low-denomination rounding policy decision for regular routes, not a new Phase 5 packaging defect.
+2. Final settlement policy is now closed using the documented Stake Engine six-decimal money model, so the earlier provisional cent-rounding sensitivity result no longer blocks publication.
 
 ## Recommended Next Step
 
-Proceed to Phase 6 publication readiness assembly with explicit carry-forward of the low-denomination regular-route rounding policy dependency.
+Proceed to Phase 6 publication readiness assembly using the final precision, rounding, and frontend contract as the governing publication policy.

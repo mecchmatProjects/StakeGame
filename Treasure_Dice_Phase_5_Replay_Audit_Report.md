@@ -62,16 +62,18 @@ Result:
 
 ### Regular Routes (0.01, 0.02, 0.05)
 
-Rounding drift pattern remains consistent with Phase 1 findings under cent rounding:
+Final publication policy uses Stake Engine six-decimal settlement precision rather than provisional fiat-cent rounding.
 
-- Significant drift at 0.01 and 0.02 for multiple regular modes.
-- Mostly aligned at 0.05, with small drift for specific modes.
+Under the final policy:
+
+- All regular-route payouts at 0.01, 0.02, and 0.05 are exactly representable.
+- No settlement-rounding RTP drift remains for any published regular mode.
 
 ### Bonus Buy (`treasure_hunt_buy`)
 
-At tested small bet levels (0.01, 0.02, 0.05), expected bonus RTP remains effectively 0.96 under cent rounding for the selected Candidate A distribution.
+At tested small bet levels (0.01, 0.02, 0.05), expected bonus RTP remains exactly 0.96 under the final settlement policy for the selected Candidate A distribution.
 
 ## Verdict
 
 - Replay and package audit status: Pass
-- Rounding policy status: Conditional inherited dependency from Phase 1 for low-denomination regular-route settlement rules
+- Rounding policy status: Pass under final publication policy defined in [Treasure_Dice_Phase_6_Precision_Rounding_And_Frontend_Contract.md](Treasure_Dice_Phase_6_Precision_Rounding_And_Frontend_Contract.md)

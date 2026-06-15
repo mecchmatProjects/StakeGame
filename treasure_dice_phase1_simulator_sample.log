@@ -1,8 +1,0 @@
-2026-06-03 12:56:47,240 | INFO | Round 1 | mode=safe_shore | roll=0.323833 | won=True | payout=1.2000 | net=0.2000 | cum_rtp=1.200000
-2026-06-03 12:56:47,240 | INFO | Round 2 | mode=hidden_bay | roll=0.150849 | won=True | payout=1.6000 | net=0.6000 | cum_rtp=1.400000
-2026-06-03 12:56:47,240 | INFO | Round 3 | mode=coral_reef | roll=0.650934 | won=False | payout=0.0000 | net=-1.0000 | cum_rtp=0.933333
-2026-06-03 12:56:47,240 | INFO | Round 4 | mode=storm_route | roll=0.072436 | won=True | payout=3.8400 | net=2.8400 | cum_rtp=1.660000
-2026-06-03 12:56:47,240 | INFO | Round 5 | mode=skull_island | roll=0.535882 | won=False | payout=0.0000 | net=-1.0000 | cum_rtp=1.328000
-2026-06-03 12:56:47,241 | INFO | Round 6 | mode=kraken_waters | roll=0.365689 | won=False | payout=0.0000 | net=-1.0000 | cum_rtp=1.106667
-2026-06-03 12:56:47,241 | INFO | Round 7 | mode=lost_treasure | roll=0.057999 | won=False | payout=0.0000 | net=-1.0000 | cum_rtp=0.948571
-2026-06-03 12:56:47,242 | INFO | Completed 7 rounds | simulated_rtp=0.948571 | report=treasure_dice_phase1_report_sample.json
