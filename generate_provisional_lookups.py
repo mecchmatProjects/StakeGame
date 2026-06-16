@@ -5,9 +5,11 @@ import csv
 import json
 from pathlib import Path
 
+import zstandard as zstd
+
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate provisional lookup and placeholder books from probability tables")
+    parser = argparse.ArgumentParser(description="Generate lookup tables and zstd-compressed books from probability tables")
     parser.add_argument("--root", required=True, help="Package root path, for example math-sdk/games/azteck_plinko_final")
     parser.add_argument("--payout-scale", type=float, default=100.0, help="Scale applied for lookup payout field")
     parser.add_argument("--strict", action="store_true", help="Fail if any mode has invalid or missing probabilities")
@@ -58,7 +60,7 @@ def write_lookup(path: Path, rows: list[tuple[int, int, float]]) -> None:
     with path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle)
         for sim_id, weight, payout_raw in rows:
-            writer.writerow([sim_id, weight, payout_raw])
+            writer.writerow([sim_id, weight, int(round(payout_raw))])
 
 
 def build_event_payload(mode_name: str, payout_mult: float, bucket_index: int, mode_type: str, difficulty: str, rows: str) -> list[dict]:
@@ -120,8 +122,7 @@ def write_deterministic_book(
     lookup_rows: list[tuple[int, int, float]],
     payout_scale: float,
 ) -> None:
-    # The file extension matches the package convention, but the current package writes line-delimited JSON
-    # without compression so the artefact remains transparent for audit and replay inspection.
+    # Stake Engine publish ingestion expects real zstd-compressed .jsonl.zst payloads.
     path.parent.mkdir(parents=True, exist_ok=True)
     lines: list[str] = []
     for bucket_index, (sim_id, weight, payout_raw) in enumerate(lookup_rows):
@@ -140,7 +141,9 @@ def write_deterministic_book(
             "events": build_event_payload(mode_name, payout_mult, bucket_index, mode_type, difficulty, rows),
         }
         lines.append(json.dumps(record, separators=(",", ":")))
-    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        payload = ("\n".join(lines) + "\n").encode("utf-8")
+        compressed = zstd.ZstdCompressor(level=3).compress(payload)
+        path.write_bytes(compressed)
 
 
 def main() -> int:
@@ -247,7 +250,7 @@ def main() -> int:
         for (sid, _, m, _, _), weight in zip(quotas, weights):
             if weight <= 0:
                 continue
-            payout_raw = round(m * args.payout_scale, 6)
+            payout_raw = int(round(m * args.payout_scale))
             lookup_rows.append((sid, weight, payout_raw))
 
         lookup_name = mode.get("weights") or f"lookUpTable_{mode_name}_0.csv"
