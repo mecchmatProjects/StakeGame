@@ -1,0 +1,344 @@
+{
+  "timestamp": "2026-06-22T15:50:52.554955",
+  "package_name": "Azteck_plinko_set",
+  "version": "1.0.0",
+  "game_modes": {
+    "total": 36,
+    "validation_status": true,
+    "passed": 36,
+    "failed": 0
+  },
+  "constraints": {
+    "rtp_target": 0.9605,
+    "rtp_tolerance": 0.01,
+    "volatility_target": 3.0,
+    "volatility_min": 0.6,
+    "volatility_max": 50.0,
+    "payout_scale": 100.0
+  },
+  "artifacts": {
+    "lookup_csvs": 72,
+    "books_files": 54,
+    "config_entries": 36,
+    "total_files_publish_zip": 74
+  },
+  "modes_by_difficulty": {
+    "Low": 9,
+    "Medium": 9,
+    "High": 9,
+    "Expert": 9
+  },
+  "modes_by_rows": {
+    "8": 4,
+    "9": 4,
+    "10": 4,
+    "11": 4,
+    "12": 4,
+    "13": 4,
+    "14": 4,
+    "15": 4,
+    "16": 4
+  },
+  "mode_details": [
+    {
+      "mode": "100balls_Low_8",
+      "theoretical_rtp": 0.96,
+      "empirical_rtp": 0.959275,
+      "empirical_std": 0.8023,
+      "max_payout": 2.41,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Medium_8",
+      "theoretical_rtp": 0.961111,
+      "empirical_rtp": 0.962555,
+      "empirical_std": 1.1576,
+      "max_payout": 3.09,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_High_8",
+      "theoretical_rtp": 0.962222,
+      "empirical_rtp": 0.965337,
+      "empirical_std": 1.4172,
+      "max_payout": 3.59,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Expert_8",
+      "theoretical_rtp": 0.965556,
+      "empirical_rtp": 0.967444,
+      "empirical_std": 1.5642,
+      "max_payout": 3.88,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_Low_9",
+      "theoretical_rtp": 0.96,
+      "empirical_rtp": 0.958212,
+      "empirical_std": 0.7796,
+      "max_payout": 2.47,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Medium_9",
+      "theoretical_rtp": 0.962,
+      "empirical_rtp": 0.961013,
+      "empirical_std": 1.2596,
+      "max_payout": 3.44,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_High_9",
+      "theoretical_rtp": 0.96,
+      "empirical_rtp": 0.959836,
+      "empirical_std": 1.4917,
+      "max_payout": 3.91,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Expert_9",
+      "theoretical_rtp": 0.964,
+      "empirical_rtp": 0.964642,
+      "empirical_std": 1.7179,
+      "max_payout": 4.39,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_Low_10",
+      "theoretical_rtp": 0.959091,
+      "empirical_rtp": 0.956908,
+      "empirical_std": 0.9939,
+      "max_payout": 3.0,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Medium_10",
+      "theoretical_rtp": 0.962727,
+      "empirical_rtp": 0.961433,
+      "empirical_std": 1.3284,
+      "max_payout": 3.73,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_High_10",
+      "theoretical_rtp": 0.962727,
+      "empirical_rtp": 0.964926,
+      "empirical_std": 1.6579,
+      "max_payout": 4.45,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Expert_10",
+      "theoretical_rtp": 0.964545,
+      "empirical_rtp": 0.964556,
+      "empirical_std": 1.8858,
+      "max_payout": 4.96,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_Low_11",
+      "theoretical_rtp": 0.96,
+      "empirical_rtp": 0.96077,
+      "empirical_std": 0.937,
+      "max_payout": 2.97,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Medium_11",
+      "theoretical_rtp": 0.96,
+      "empirical_rtp": 0.959346,
+      "empirical_std": 1.3213,
+      "max_payout": 3.84,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_High_11",
+      "theoretical_rtp": 0.961667,
+      "empirical_rtp": 0.960618,
+      "empirical_std": 1.7707,
+      "max_payout": 4.9,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Expert_11",
+      "theoretical_rtp": 0.965,
+      "empirical_rtp": 0.96116,
+      "empirical_std": 1.991,
+      "max_payout": 5.42,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_Low_12",
+      "theoretical_rtp": 0.959231,
+      "empirical_rtp": 0.960568,
+      "empirical_std": 1.0694,
+      "max_payout": 3.4,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Medium_12",
+      "theoretical_rtp": 0.958462,
+      "empirical_rtp": 0.95749,
+      "empirical_std": 1.3484,
+      "max_payout": 3.97,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_High_12",
+      "theoretical_rtp": 0.960769,
+      "empirical_rtp": 0.958213,
+      "empirical_std": 1.8087,
+      "max_payout": 5.17,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Expert_12",
+      "theoretical_rtp": 0.953077,
+      "empirical_rtp": 0.951167,
+      "empirical_std": 2.0714,
+      "max_payout": 5.81,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_Low_13",
+      "theoretical_rtp": 0.962857,
+      "empirical_rtp": 0.962084,
+      "empirical_std": 0.8191,
+      "max_payout": 2.75,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Medium_13",
+      "theoretical_rtp": 0.961429,
+      "empirical_rtp": 0.962318,
+      "empirical_std": 1.4198,
+      "max_payout": 4.29,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_High_13",
+      "theoretical_rtp": 0.952857,
+      "empirical_rtp": 0.951379,
+      "empirical_std": 1.8802,
+      "max_payout": 5.52,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Expert_13",
+      "theoretical_rtp": 0.965714,
+      "empirical_rtp": 0.96929,
+      "empirical_std": 2.1964,
+      "max_payout": 6.33,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_Low_14",
+      "theoretical_rtp": 0.961333,
+      "empirical_rtp": 0.96149,
+      "empirical_std": 0.8307,
+      "max_payout": 2.83,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Medium_14",
+      "theoretical_rtp": 0.961333,
+      "empirical_rtp": 0.957799,
+      "empirical_std": 1.5418,
+      "max_payout": 4.78,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_High_14",
+      "theoretical_rtp": 0.962,
+      "empirical_rtp": 0.963326,
+      "empirical_std": 2.0055,
+      "max_payout": 6.03,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Expert_14",
+      "theoretical_rtp": 0.964667,
+      "empirical_rtp": 0.968163,
+      "empirical_std": 2.3329,
+      "max_payout": 6.9,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_Low_15",
+      "theoretical_rtp": 0.96125,
+      "empirical_rtp": 0.960241,
+      "empirical_std": 1.1159,
+      "max_payout": 3.57,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Medium_15",
+      "theoretical_rtp": 0.96125,
+      "empirical_rtp": 0.962171,
+      "empirical_std": 1.6849,
+      "max_payout": 5.32,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_High_15",
+      "theoretical_rtp": 0.9625,
+      "empirical_rtp": 0.962083,
+      "empirical_std": 2.0792,
+      "max_payout": 6.42,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Expert_15",
+      "theoretical_rtp": 0.965,
+      "empirical_rtp": 0.965785,
+      "empirical_std": 2.4526,
+      "max_payout": 7.45,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_Low_16",
+      "theoretical_rtp": 0.958824,
+      "empirical_rtp": 0.953376,
+      "empirical_std": 1.2361,
+      "max_payout": 3.92,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Medium_16",
+      "theoretical_rtp": 0.966471,
+      "empirical_rtp": 0.963296,
+      "empirical_std": 1.6714,
+      "max_payout": 5.26,
+      "status": "PASS"
+    },
+    {
+      "mode": "100balls_High_16",
+      "theoretical_rtp": 0.962941,
+      "empirical_rtp": 0.961891,
+      "empirical_std": 2.2098,
+      "max_payout": 6.97,
+      "status": "PASS"
+    },
+    {
+      "mode": "normal_Expert_16",
+      "theoretical_rtp": 0.953529,
+      "empirical_rtp": 0.952645,
+      "empirical_std": 2.5214,
+      "max_payout": 7.86,
+      "status": "PASS"
+    }
+  ],
+  "zips": {
+    "Azteck_plinko_set_publish.zip": {
+      "description": "Flat-root for Stake Engine upload",
+      "size_mb": 0.03373908996582031,
+      "file_count": 112
+    },
+    "Azteck_plinko_set_full.zip": {
+      "description": "Full development package",
+      "size_mb": 0.06585979461669922,
+      "file_count": 172
+    }
+  }
+}

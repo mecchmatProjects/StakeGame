@@ -1,0 +1,258 @@
+{
+  "gameId": "azteck_plinko_set",
+  "version": "1.0.0",
+  "modes": [
+    {
+      "id": 1,
+      "name": "100balls_Low_8",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Low"
+    },
+    {
+      "id": 2,
+      "name": "normal_Medium_8",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Medium"
+    },
+    {
+      "id": 3,
+      "name": "100balls_High_8",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "High"
+    },
+    {
+      "id": 4,
+      "name": "normal_Expert_8",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Expert"
+    },
+    {
+      "id": 5,
+      "name": "100balls_Low_9",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Low"
+    },
+    {
+      "id": 6,
+      "name": "normal_Medium_9",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Medium"
+    },
+    {
+      "id": 7,
+      "name": "100balls_High_9",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "High"
+    },
+    {
+      "id": 8,
+      "name": "normal_Expert_9",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Expert"
+    },
+    {
+      "id": 9,
+      "name": "100balls_Low_10",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Low"
+    },
+    {
+      "id": 10,
+      "name": "normal_Medium_10",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Medium"
+    },
+    {
+      "id": 11,
+      "name": "100balls_High_10",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "High"
+    },
+    {
+      "id": 12,
+      "name": "normal_Expert_10",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Expert"
+    },
+    {
+      "id": 13,
+      "name": "100balls_Low_11",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Low"
+    },
+    {
+      "id": 14,
+      "name": "normal_Medium_11",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Medium"
+    },
+    {
+      "id": 15,
+      "name": "100balls_High_11",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "High"
+    },
+    {
+      "id": 16,
+      "name": "normal_Expert_11",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Expert"
+    },
+    {
+      "id": 17,
+      "name": "100balls_Low_12",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Low"
+    },
+    {
+      "id": 18,
+      "name": "normal_Medium_12",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Medium"
+    },
+    {
+      "id": 19,
+      "name": "100balls_High_12",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "High"
+    },
+    {
+      "id": 20,
+      "name": "normal_Expert_12",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Expert"
+    },
+    {
+      "id": 21,
+      "name": "100balls_Low_13",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Low"
+    },
+    {
+      "id": 22,
+      "name": "normal_Medium_13",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Medium"
+    },
+    {
+      "id": 23,
+      "name": "100balls_High_13",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "High"
+    },
+    {
+      "id": 24,
+      "name": "normal_Expert_13",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Expert"
+    },
+    {
+      "id": 25,
+      "name": "100balls_Low_14",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Low"
+    },
+    {
+      "id": 26,
+      "name": "normal_Medium_14",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Medium"
+    },
+    {
+      "id": 27,
+      "name": "100balls_High_14",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "High"
+    },
+    {
+      "id": 28,
+      "name": "normal_Expert_14",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Expert"
+    },
+    {
+      "id": 29,
+      "name": "100balls_Low_15",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Low"
+    },
+    {
+      "id": 30,
+      "name": "normal_Medium_15",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Medium"
+    },
+    {
+      "id": 31,
+      "name": "100balls_High_15",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "High"
+    },
+    {
+      "id": 32,
+      "name": "normal_Expert_15",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Expert"
+    },
+    {
+      "id": 33,
+      "name": "100balls_Low_16",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Low"
+    },
+    {
+      "id": 34,
+      "name": "normal_Medium_16",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Medium"
+    },
+    {
+      "id": 35,
+      "name": "100balls_High_16",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "High"
+    },
+    {
+      "id": 36,
+      "name": "normal_Expert_16",
+      "cost": 1.0,
+      "rtp": 0.9605,
+      "difficulty": "Expert"
+    }
+  ]
+}

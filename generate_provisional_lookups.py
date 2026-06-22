@@ -63,7 +63,17 @@ def write_lookup(path: Path, rows: list[tuple[int, int, float]]) -> None:
             writer.writerow([sim_id, weight, int(round(payout_raw))])
 
 
-def build_event_payload(mode_name: str, payout_mult: float, bucket_index: int, mode_type: str, difficulty: str, rows: str) -> list[dict]:
+def _jnum(v: float) -> int | float:
+    """Emit whole-number floats as int so JSON avoids '297.0' which Stake Engine rejects."""
+    if isinstance(v, float) and v.is_integer():
+        return int(v)
+    return v
+
+
+def build_event_payload(mode_name: str, payout_raw_int: int, bucket_index: int, mode_type: str, difficulty: str, rows: str) -> list[dict]:
+    """payout_raw_int is the unscaled integer payout (same as lookup payoutRaw).
+    Stake Engine requires all numeric event fields to be integers; the RGS applies payoutScale at runtime.
+    """
     if mode_type == "100balls":
         return [
             {
@@ -81,11 +91,11 @@ def build_event_payload(mode_name: str, payout_mult: float, bucket_index: int, m
             {
                 "type": "batch_buckets_landed",
                 "outcomeBucketId": bucket_index,
-                "payoutMultiplier": payout_mult,
+                "payoutMultiplier": payout_raw_int,
             },
             {
                 "type": "settlement",
-                "totalPayoutMultiplier": payout_mult,
+                "totalPayoutMultiplier": payout_raw_int,
             },
         ]
 
@@ -104,11 +114,11 @@ def build_event_payload(mode_name: str, payout_mult: float, bucket_index: int, m
         {
             "type": "bucket_landed",
             "outcomeBucketId": bucket_index,
-            "payoutMultiplier": payout_mult,
+            "payoutMultiplier": payout_raw_int,
         },
         {
             "type": "settlement",
-            "totalPayoutMultiplier": payout_mult,
+            "totalPayoutMultiplier": payout_raw_int,
         },
     ]
 
@@ -126,7 +136,7 @@ def write_deterministic_book(
     path.parent.mkdir(parents=True, exist_ok=True)
     lines: list[str] = []
     for bucket_index, (sim_id, weight, payout_raw) in enumerate(lookup_rows):
-        payout_mult = payout_raw / payout_scale
+        payout_raw_int = int(round(payout_raw))  # always integer; RGS divides by payoutScale at runtime
         record = {
             "id": sim_id,
             "mode": mode_name,
@@ -135,15 +145,14 @@ def write_deterministic_book(
             "rows": int(rows),
             "weight": weight,
             "outcomeBucketId": bucket_index,
-            "payoutRaw": payout_raw,
-            "payoutMultiplier": payout_mult,
+            "payoutMultiplier": payout_raw_int,
             "criteria": "deterministic_static_outcome",
-            "events": build_event_payload(mode_name, payout_mult, bucket_index, mode_type, difficulty, rows),
+            "events": build_event_payload(mode_name, payout_raw_int, bucket_index, mode_type, difficulty, rows),
         }
         lines.append(json.dumps(record, separators=(",", ":")))
-        payload = ("\n".join(lines) + "\n").encode("utf-8")
-        compressed = zstd.ZstdCompressor(level=3).compress(payload)
-        path.write_bytes(compressed)
+    payload = ("\n".join(lines) + "\n").encode("utf-8")
+    compressed = zstd.ZstdCompressor(level=3).compress(payload)
+    path.write_bytes(compressed)
 
 
 def main() -> int:
@@ -248,8 +257,9 @@ def main() -> int:
 
         lookup_rows: list[tuple[int, int, float]] = []
         for (sid, _, m, _, _), weight in zip(quotas, weights):
-            if weight <= 0:
-                continue
+            # Keep zero-weight buckets so lookup row count stays aligned with rows+1.
+            # Some extreme-tail probabilities quantize to 0 at integer weight precision.
+            weight = max(0, int(weight))
             payout_raw = int(round(m * args.payout_scale))
             lookup_rows.append((sid, weight, payout_raw))
 

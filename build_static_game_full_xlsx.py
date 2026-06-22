@@ -592,7 +592,7 @@ def main() -> None:
         ws.cell(srow, 4, f'=IF(C{srow}="","",C{srow}+1)')
         ws.cell(srow, 5, f"={sref}!{refs['outcome_rows']}")
         ws.cell(srow, 6, f"={sref}!{refs['unique_mult']}")
-        ws.cell(srow, 7, f'=IF(C{srow}="","N/A",F{srow}=ROUNDUP((C{srow}+1)/2,0))')
+        ws.cell(srow, 7, f'=IF(C{srow}="","N/A",E{srow}=D{srow})')
         ws.cell(srow, 8, f"={sref}!$D$3")
         ws.cell(srow, 9, f"={sref}!{refs['rtp']}")
         ws.cell(srow, 10, f"=ABS(I{srow}-H{srow})")
