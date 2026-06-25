@@ -9,6 +9,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 import zipfile
 from pathlib import Path
 
@@ -212,6 +213,49 @@ def run(cmd: list[str], dry_run: bool) -> None:
     subprocess.run(cmd, check=True)
 
 
+def python_path_literal(path: Path) -> str:
+    return repr(path.resolve().as_posix())
+
+
+def run_with_root(script: str, root: Path, dry_run: bool) -> None:
+    """Run a legacy helper script after replacing its hardcoded package root."""
+    script_path = Path(script)
+    patched = script_path.read_text(encoding="utf-8")
+    root_literal = python_path_literal(root)
+    patched = patched.replace(
+        'ROOT = Path("math-sdk/games/azteck_plinko_final")',
+        f"ROOT = Path({root_literal})",
+    )
+    patched = patched.replace(
+        'root = Path("math-sdk/games/azteck_plinko_final")',
+        f"root = Path({root_literal})",
+    )
+    if dry_run:
+        print("RUN", sys.executable, script, f"[patched root={root}]")
+        return
+    with tempfile.TemporaryDirectory(prefix="azteck_txt_build_") as tmp:
+        tmp_script = Path(tmp) / script_path.name
+        tmp_script.write_text(patched, encoding="utf-8")
+        run([sys.executable, str(tmp_script)], dry_run=False)
+
+
+def sync_publish(root: Path, dry_run: bool) -> None:
+    publish = root / "artifacts" / "publish_files"
+    nested = root / "azteck_plinko_final_publish"
+    zips = [root / "azteck_plinko_final_publish.zip", root / "artifacts.zip"]
+    if dry_run:
+        print(f"Would mirror {publish} -> {nested} and write {len(zips)} flat zips")
+        return
+    files = sorted(p for p in publish.iterdir() if p.is_file())
+    if nested.exists():
+        shutil.rmtree(nested)
+    nested.mkdir(parents=True)
+    for file in files:
+        shutil.copy2(file, nested / file.name)
+    for target in zips:
+        zip_folder_flat(publish, target)
+
+
 def sha256(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as handle:
@@ -258,12 +302,12 @@ def zip_folder_flat(folder: Path, target_zip: Path) -> None:
 
 
 def build_current(root: Path, bets: list[float], dry_run: bool, skip_validation: bool) -> None:
-    run([sys.executable, "rebuild_azteck_final_symmetric.py"], dry_run)
-    run([sys.executable, "gen_sdk_config.py"], dry_run)
+    run_with_root("rebuild_azteck_final_symmetric.py", root, dry_run)
+    run_with_root("gen_sdk_config.py", root, dry_run)
     if not dry_run:
         patch_bets(root, bets)
         copy_configs_to_publish(root)
-    run([sys.executable, "sync_publish_destinations.py"], dry_run)
+    sync_publish(root, dry_run)
     run([
         sys.executable, "build_static_game_full_xlsx.py",
         "--root", str(root),
