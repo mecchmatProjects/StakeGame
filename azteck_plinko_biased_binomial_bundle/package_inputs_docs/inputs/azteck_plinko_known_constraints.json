@@ -1,0 +1,61 @@
+{
+  "game_id": "azteck_plinko",
+  "target_rtp": 0.9605,
+  "house_edge": 0.0395,
+  "bet_range": {
+    "min": 0.01,
+    "max": 500.0,
+    "source": "RGS auth response at runtime"
+  },
+  "difficulty_levels": ["Low", "Medium", "High", "Expert"],
+  "rows_supported": [8, 9, 10, 11, 12, 13, 14, 15, 16],
+  "feature_modes": {
+    "normal": {
+      "cost_multiplier": 1,
+      "max_win_by_difficulty": {
+        "Low": 16,
+        "Medium": 110,
+        "High": 1000,
+        "Expert": 100000
+      },
+      "expert_max_win_by_rows": {
+        "8": 500,
+        "9": 1000,
+        "10": 2010,
+        "11": 3240,
+        "12": 6190,
+        "13": 10000,
+        "14": 23000,
+        "15": 50000,
+        "16": 100000
+      }
+    },
+    "100balls": {
+      "cost_multiplier": 99,
+      "max_win_by_difficulty": {
+        "Low": 1584,
+        "Medium": 10890,
+        "High": 99000,
+        "Expert": 100000
+      },
+      "expert_max_win_by_rows": {
+        "8": 49500,
+        "9": 99000,
+        "10": 100000,
+        "11": 100000,
+        "12": 100000,
+        "13": 100000,
+        "14": 100000,
+        "15": 100000,
+        "16": 100000
+      }
+    }
+  },
+  "known_gaps": [
+    "Full bucket paytables across all difficulty x rows",
+    "Probability distributions for each bucket",
+    "Final replay event schema",
+    "Rounding policy by currency"
+  ],
+  "source": "Azteck Plinko Math.docx"
+}

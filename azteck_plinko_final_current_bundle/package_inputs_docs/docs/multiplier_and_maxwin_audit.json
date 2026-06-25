@@ -1,0 +1,32 @@
+{
+  "multiplier_integrity": {
+    "probability_table_mismatches": 0
+  },
+  "normal_low_16_reference": [
+    16.0,
+    9.0,
+    2.0,
+    1.4,
+    1.4,
+    1.2,
+    1.1,
+    1.0,
+    0.5,
+    1.0,
+    1.1,
+    1.2,
+    1.4,
+    1.4,
+    2.0,
+    9.0,
+    16.0
+  ],
+  "max_win_worst_case": {
+    "mode": "normal_low_16",
+    "max_multiplier": 16.0,
+    "odds_1_in": 19999601.008239836,
+    "odds_1_in_millions": 19.999601008239836
+  },
+  "requirement_max_win_odds_leq": 20000000,
+  "passes_max_win_requirement": true
+}

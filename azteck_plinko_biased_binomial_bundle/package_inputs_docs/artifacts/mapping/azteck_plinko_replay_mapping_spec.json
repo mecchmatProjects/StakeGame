@@ -1,0 +1,39 @@
+{
+  "gameId": "azteck_plinko",
+  "version": "0.1.0-model-synthesized",
+  "deterministicReplay": true,
+  "status": "defined",
+  "requiredFields": [
+    "roundId",
+    "modeId",
+    "modeType",
+    "difficulty",
+    "rows",
+    "simulationId",
+    "outcomeBucketId",
+    "payoutMultiplier",
+    "payoutRaw",
+    "betAmount"
+  ],
+  "mappingRules": {
+    "bucketDomain": "integer bucket index in [0, rows]",
+    "settlementSource": "lookup table payout for modeId + simulationId",
+    "presentationDeterminism": "frontend trajectory selection may vary visually but must terminate in outcomeBucketId and must not affect settlement",
+    "normalModeEventFlow": [
+      "round_init",
+      "trajectory_selected",
+      "bucket_landed",
+      "settlement"
+    ],
+    "buy100ModeEventFlow": [
+      "round_init",
+      "batch_trajectories_selected",
+      "batch_buckets_landed",
+      "settlement"
+    ]
+  },
+  "notes": [
+    "Replay is fully determined by the stored mode, bucket, simulation id, and payout fields.",
+    "The current package is math-complete; frontend event enrichment can extend but must not alter the deterministic settlement mapping."
+  ]
+}

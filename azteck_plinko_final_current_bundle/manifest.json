@@ -1,0 +1,43 @@
+﻿{
+    "bundle":  "azteck_plinko_final_current_bundle",
+    "created":  "2026-06-25T16:11:49",
+    "publish_source":  "math-sdk\\games\\azteck_plinko_final\\azteck_plinko_final_publish",
+    "zip_sources":  [
+                        "math-sdk\\games\\azteck_plinko_final\\azteck_plinko_final_publish.zip",
+                        "math-sdk\\games\\azteck_plinko_final\\artifacts.zip",
+                        "math-sdk\\games\\azteck_plinko_final_publish.zip"
+                    ],
+    "audit_sources":  [
+                          "math-sdk\\games\\azteck_plinko_final\\AzteckPlinkoFull_audit_formulas.xlsx",
+                          "math-sdk\\games\\azteck_plinko_final\\AzteckPlinkoFull_with_Buy100.xlsx"
+                      ],
+    "script_sources":  [
+                           "rebuild_azteck_final_symmetric.py",
+                           "gen_sdk_config.py",
+                           "build_static_game_full_xlsx.py",
+                           "sync_publish_destinations.py",
+                           "check_excel_artifact_consistency.py",
+                           "check_static_package_readiness.py",
+                           "check_std_rule.py",
+                           "check_buy100_rtp.py",
+                           "verify_buy100_final.py",
+                           "verify_buy100_spec.py"
+                       ],
+    "spec_sources":  [
+                         "Azteck Plinko Math.docx",
+                         "AzteckPlinkNewRules.rtf",
+                         "AzreckPlinko_multipliers.txt",
+                         "Plinko_updates.txt",
+                         "bets.txt"
+                     ],
+    "package_context_dirs":  [
+                                 "math-sdk\\games\\azteck_plinko_final\\inputs",
+                                 "math-sdk\\games\\azteck_plinko_final\\docs"
+                             ],
+    "package_context_files":  [
+                                  "math-sdk\\games\\azteck_plinko_final\\README.md",
+                                  "math-sdk\\games\\azteck_plinko_final\\ARTIFACT_TUTORIAL.md",
+                                  "math-sdk\\games\\azteck_plinko_final\\config.json",
+                                  "math-sdk\\games\\azteck_plinko_final\\fe_config.json"
+                              ]
+}

@@ -1,0 +1,411 @@
+{
+    "gameId": "azteck_plinko",
+    "version": "0.0.6-std-bounded-symmetric-design",
+    "rtpTarget": 0.9605,
+    "betValues": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        12.0,
+        14.0,
+        16.0,
+        18.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        75.0,
+        100.0,
+        150.0,
+        200.0,
+        250.0,
+        300.0,
+        350.0,
+        400.0,
+        450.0,
+        500.0
+    ],
+    "minBet": 0.01,
+    "maxBet": 500.0,
+    "modes": [
+        {
+            "name": "normal_low_8",
+            "cost": 1.0,
+            "maxWin": 5.6
+        },
+        {
+            "name": "buy100_low_8",
+            "cost": 99.0,
+            "maxWin": 128.4
+        },
+        {
+            "name": "normal_low_9",
+            "cost": 1.0,
+            "maxWin": 5.6
+        },
+        {
+            "name": "buy100_low_9",
+            "cost": 99.0,
+            "maxWin": 131.97
+        },
+        {
+            "name": "normal_low_10",
+            "cost": 1.0,
+            "maxWin": 8.9
+        },
+        {
+            "name": "buy100_low_10",
+            "cost": 99.0,
+            "maxWin": 132.46
+        },
+        {
+            "name": "normal_low_11",
+            "cost": 1.0,
+            "maxWin": 8.4
+        },
+        {
+            "name": "buy100_low_11",
+            "cost": 99.0,
+            "maxWin": 135.04
+        },
+        {
+            "name": "normal_low_12",
+            "cost": 1.0,
+            "maxWin": 10.0
+        },
+        {
+            "name": "buy100_low_12",
+            "cost": 99.0,
+            "maxWin": 138.6
+        },
+        {
+            "name": "normal_low_13",
+            "cost": 1.0,
+            "maxWin": 8.1
+        },
+        {
+            "name": "buy100_low_13",
+            "cost": 99.0,
+            "maxWin": 137.61
+        },
+        {
+            "name": "normal_low_14",
+            "cost": 1.0,
+            "maxWin": 7.1
+        },
+        {
+            "name": "buy100_low_14",
+            "cost": 99.0,
+            "maxWin": 130.78
+        },
+        {
+            "name": "normal_low_15",
+            "cost": 1.0,
+            "maxWin": 15.0
+        },
+        {
+            "name": "buy100_low_15",
+            "cost": 99.0,
+            "maxWin": 141.77
+        },
+        {
+            "name": "normal_low_16",
+            "cost": 1.0,
+            "maxWin": 16.0
+        },
+        {
+            "name": "buy100_low_16",
+            "cost": 99.0,
+            "maxWin": 142.66
+        },
+        {
+            "name": "normal_medium_8",
+            "cost": 1.0,
+            "maxWin": 13.0
+        },
+        {
+            "name": "buy100_medium_8",
+            "cost": 99.0,
+            "maxWin": 160.48
+        },
+        {
+            "name": "normal_medium_9",
+            "cost": 1.0,
+            "maxWin": 18.0
+        },
+        {
+            "name": "buy100_medium_9",
+            "cost": 99.0,
+            "maxWin": 156.02
+        },
+        {
+            "name": "normal_medium_10",
+            "cost": 1.0,
+            "maxWin": 22.0
+        },
+        {
+            "name": "buy100_medium_10",
+            "cost": 99.0,
+            "maxWin": 143.35
+        },
+        {
+            "name": "normal_medium_11",
+            "cost": 1.0,
+            "maxWin": 24.0
+        },
+        {
+            "name": "buy100_medium_11",
+            "cost": 99.0,
+            "maxWin": 144.84
+        },
+        {
+            "name": "normal_medium_12",
+            "cost": 1.0,
+            "maxWin": 33.0
+        },
+        {
+            "name": "buy100_medium_12",
+            "cost": 99.0,
+            "maxWin": 158.1
+        },
+        {
+            "name": "normal_medium_13",
+            "cost": 1.0,
+            "maxWin": 43.0
+        },
+        {
+            "name": "buy100_medium_13",
+            "cost": 99.0,
+            "maxWin": 156.62
+        },
+        {
+            "name": "normal_medium_14",
+            "cost": 1.0,
+            "maxWin": 58.0
+        },
+        {
+            "name": "buy100_medium_14",
+            "cost": 99.0,
+            "maxWin": 156.42
+        },
+        {
+            "name": "normal_medium_15",
+            "cost": 1.0,
+            "maxWin": 88.0
+        },
+        {
+            "name": "buy100_medium_15",
+            "cost": 99.0,
+            "maxWin": 168.89
+        },
+        {
+            "name": "normal_medium_16",
+            "cost": 1.0,
+            "maxWin": 110.0
+        },
+        {
+            "name": "buy100_medium_16",
+            "cost": 99.0,
+            "maxWin": 151.77
+        },
+        {
+            "name": "normal_high_8",
+            "cost": 1.0,
+            "maxWin": 29.0
+        },
+        {
+            "name": "buy100_high_8",
+            "cost": 99.0,
+            "maxWin": 233.24
+        },
+        {
+            "name": "normal_high_9",
+            "cost": 1.0,
+            "maxWin": 43.0
+        },
+        {
+            "name": "buy100_high_9",
+            "cost": 99.0,
+            "maxWin": 212.45
+        },
+        {
+            "name": "normal_high_10",
+            "cost": 1.0,
+            "maxWin": 76.0
+        },
+        {
+            "name": "buy100_high_10",
+            "cost": 99.0,
+            "maxWin": 226.02
+        },
+        {
+            "name": "normal_high_11",
+            "cost": 1.0,
+            "maxWin": 120.0
+        },
+        {
+            "name": "buy100_high_11",
+            "cost": 99.0,
+            "maxWin": 198.59
+        },
+        {
+            "name": "normal_high_12",
+            "cost": 1.0,
+            "maxWin": 170.0
+        },
+        {
+            "name": "buy100_high_12",
+            "cost": 99.0,
+            "maxWin": 217.7
+        },
+        {
+            "name": "normal_high_13",
+            "cost": 1.0,
+            "maxWin": 260.0
+        },
+        {
+            "name": "buy100_high_13",
+            "cost": 99.0,
+            "maxWin": 233.44
+        },
+        {
+            "name": "normal_high_14",
+            "cost": 1.0,
+            "maxWin": 420.0
+        },
+        {
+            "name": "buy100_high_14",
+            "cost": 99.0,
+            "maxWin": 257.1
+        },
+        {
+            "name": "normal_high_15",
+            "cost": 1.0,
+            "maxWin": 620.0
+        },
+        {
+            "name": "buy100_high_15",
+            "cost": 99.0,
+            "maxWin": 264.43
+        },
+        {
+            "name": "normal_high_16",
+            "cost": 1.0,
+            "maxWin": 1000.0
+        },
+        {
+            "name": "buy100_high_16",
+            "cost": 99.0,
+            "maxWin": 206.51
+        },
+        {
+            "name": "normal_expert_8",
+            "cost": 1.0,
+            "maxWin": 500.0
+        },
+        {
+            "name": "buy100_expert_8",
+            "cost": 99.0,
+            "maxWin": 273.44
+        },
+        {
+            "name": "normal_expert_9",
+            "cost": 1.0,
+            "maxWin": 1000.0
+        },
+        {
+            "name": "buy100_expert_9",
+            "cost": 99.0,
+            "maxWin": 343.93
+        },
+        {
+            "name": "normal_expert_10",
+            "cost": 1.0,
+            "maxWin": 2000.0
+        },
+        {
+            "name": "buy100_expert_10",
+            "cost": 99.0,
+            "maxWin": 342.84
+        },
+        {
+            "name": "normal_expert_11",
+            "cost": 1.0,
+            "maxWin": 3200.0
+        },
+        {
+            "name": "buy100_expert_11",
+            "cost": 99.0,
+            "maxWin": 497.87
+        },
+        {
+            "name": "normal_expert_12",
+            "cost": 1.0,
+            "maxWin": 6200.0
+        },
+        {
+            "name": "buy100_expert_12",
+            "cost": 99.0,
+            "maxWin": 502.42
+        },
+        {
+            "name": "normal_expert_13",
+            "cost": 1.0,
+            "maxWin": 10000.0
+        },
+        {
+            "name": "buy100_expert_13",
+            "cost": 99.0,
+            "maxWin": 644.69
+        },
+        {
+            "name": "normal_expert_14",
+            "cost": 1.0,
+            "maxWin": 25000.0
+        },
+        {
+            "name": "buy100_expert_14",
+            "cost": 99.0,
+            "maxWin": 842.79
+        },
+        {
+            "name": "normal_expert_15",
+            "cost": 1.0,
+            "maxWin": 25000.0
+        },
+        {
+            "name": "buy100_expert_15",
+            "cost": 99.0,
+            "maxWin": 771.31
+        },
+        {
+            "name": "normal_expert_16",
+            "cost": 1.0,
+            "maxWin": 25000.0
+        },
+        {
+            "name": "buy100_expert_16",
+            "cost": 99.0,
+            "maxWin": 860.61
+        }
+    ]
+}

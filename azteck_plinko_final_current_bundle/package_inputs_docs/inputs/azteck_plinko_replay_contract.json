@@ -1,0 +1,34 @@
+{
+  "gameId": "azteck_plinko",
+  "version": "0.1.0-model-synthesized",
+  "status": "defined",
+  "requiredBackendState": {
+    "roundId": "string",
+    "modeId": "normal_<difficulty>_<rows> | buy100_<difficulty>_<rows>",
+    "modeType": "normal|100balls",
+    "difficulty": "Low|Medium|High|Expert",
+    "rows": "integer 8..16",
+    "simulationId": "integer lookup row id",
+    "outcomeBucketId": "integer bucket index",
+    "payoutMultiplier": "decimal multiplier from published lookup",
+    "payoutRaw": "lookup payout_raw value",
+    "betAmount": "decimal stake amount"
+  },
+  "frontendReplayContract": {
+    "mustBeDeterministic": true,
+    "eventSequence": [
+      "round_init",
+      "trajectory_selected",
+      "bucket_landed",
+      "settlement"
+    ],
+    "100ballsEventSequence": [
+      "round_init",
+      "batch_trajectories_selected",
+      "batch_buckets_landed",
+      "settlement"
+    ],
+    "deterministicRule": "modeId + simulationId + outcomeBucketId + payoutMultiplier must uniquely determine replay outcome",
+    "notes": "Presentation may choose any deterministic path variant that lands in the resolved bucket and preserves the stored payout."
+  }
+}

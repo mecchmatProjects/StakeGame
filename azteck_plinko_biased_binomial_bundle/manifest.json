@@ -1,0 +1,37 @@
+﻿{
+    "bundle":  "azteck_plinko_biased_binomial_bundle",
+    "created":  "2026-06-25T16:11:50",
+    "publish_source":  "math-sdk\\games\\azteck_plinko_biased_binomial_publish",
+    "zip_sources":  [
+                        "math-sdk\\games\\azteck_plinko_biased_binomial_publish.zip"
+                    ],
+    "audit_sources":  [
+                          "math-sdk\\games\\azteck_plinko_biased_binomial\\AzteckPlinkoBiased_audit_formulas.xlsx",
+                          "math-sdk\\games\\azteck_plinko_biased_binomial\\AzteckPlinkoFull_audit_formulas.xlsx"
+                      ],
+    "script_sources":  [
+                           "rebuild_azteck_biased_binomial_package.py",
+                           "gen_sdk_config.py",
+                           "build_static_game_full_xlsx.py",
+                           "check_excel_artifact_consistency.py",
+                           "check_static_package_readiness.py"
+                       ],
+    "spec_sources":  [
+                         "Azteck Plinko Math.docx",
+                         "AzteckPlinkNewRules.rtf",
+                         "AzreckPlinko_multipliers.txt",
+                         "Plinko_updates.txt",
+                         "bets.txt"
+                     ],
+    "package_context_dirs":  [
+                                 "math-sdk\\games\\azteck_plinko_biased_binomial\\inputs",
+                                 "math-sdk\\games\\azteck_plinko_biased_binomial\\docs",
+                                 "math-sdk\\games\\azteck_plinko_biased_binomial\\artifacts"
+                             ],
+    "package_context_files":  [
+                                  "math-sdk\\games\\azteck_plinko_biased_binomial\\README.md",
+                                  "math-sdk\\games\\azteck_plinko_biased_binomial\\ARTIFACT_TUTORIAL.md",
+                                  "math-sdk\\games\\azteck_plinko_biased_binomial\\config.json",
+                                  "math-sdk\\games\\azteck_plinko_biased_binomial\\fe_config.json"
+                              ]
+}

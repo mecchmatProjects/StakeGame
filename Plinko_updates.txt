@@ -1,0 +1,239 @@
+Окей, тепер ми переходимо від “класичного Plinko” до Stake Engine real model, де:
+[6/22/2026 5:44 PM] Tetiana Ponomarenko: https://stake-engine.com/teams/aleatrix-gaming/games?launch=true&team=aleatrix-gaming&game=temple-plinko&currency=USD&language=en&deviceType=desktop&balance=1000000000&social=false&math=10&front=6&checklist=false&replay=false&amount=1000000 тут взагалі можна потестувати
+[6/23/2026 4:29 PM] Кирило: Клієнт повинен знати в яку ячейку впаде мʼячик
+[6/23/2026 4:29 PM] Кирило: Далі він шукає туди шлях
+Нам потрібен цей бакет
+👉 результат визначається наперед (bucket заданий)
+👉 фізика — це лише візуалізація
+
+Тобто модель принципово інша.
+
+1. Нова логіка гри (Stake Engine)
+🔑 Ключова зміна
+
+❗ Гравець (або RNG) спочатку отримує bucket,
+а потім система будує шлях до нього.
+
+Це означає:
+
+Outcome=k∼P(k)
+
+а не:
+
+path⇒k
+2. Повна формалізація гри
+2.1 Параметри
+Bet:
+b∈[0.01,500]
+Difficulty:
+d∈{Low, Medium, High, Expert}
+Rows:
+N∈N
+2.2 Для кожного (d, N) задано:
+1. Ймовірності:
+P
+d
+N
+	​
+
+(k),k=0,…,N
+2. Множники:
+M
+d
+N
+	​
+
+(k)
+3. Генерація результату
+🎯 Крок 1 — RNG вибирає bucket
+k∼P
+d
+N
+	​
+
+(k)
+🎯 Крок 2 — виплата
+Win=b⋅M
+d
+N
+	​
+
+(k)
+🎯 Крок 3 — будується шлях
+
+Задача:
+
+знайти шлях довжини N, що веде в bucket k
+
+4. Математика шляху
+
+Щоб потрапити в bucket k:
+
+\text{#right} = k,\quad \text{#left} = N-k
+Кількість можливих шляхів:
+(
+k
+N
+	​
+
+)
+Але тепер:
+
+👉 ми НЕ вибираємо випадковий шлях
+👉 ми вибираємо конкретний шлях, що веде в k
+
+5. Конструкція шляху (важливо!)
+
+Маємо:
+
+i=1
+∑
+N
+	​
+
+x
+i
+	​
+
+=k,x
+i
+	​
+
+∈{0,1}
+Варіанти реалізації
+✅ 1. Random valid path
+генеруємо будь-який шлях з k правих
+shuffle
+✅ 2. Deterministic path (часто Stake)
+hash(seed, nonce)
+мапимо в конкретну комбінацію
+✅ 3. Pseudo-physics path
+slight randomness
+але з bias до target
+6. Нова RTP модель
+RTP=
+k=0
+∑
+N
+	​
+
+P
+d
+N
+	​
+
+(k)⋅M
+d
+N
+	​
+
+(k)
+
+👉 тепер:
+
+P(k) — НЕ обов’язково binomial
+це design choice
+7. Що тепер означає difficulty
+LOW
+P(k) концентрований у центрі
+M(k) плоский
+EXPERT
+P(k) → більше маси в хвостах
+M(k) → величезні
+8. Головна перевага такої моделі
+
+👉 ти контролюєш:
+
+RTP
+volatility
+tail risk
+9. Probability limits (тепер стає ясно)
+
+Тепер:
+
+P(win ≥ 5000x)=
+k:M(k)≥5000
+∑
+	​
+
+P(k)
+
+👉 ти напряму контролюєш це через P(k)
+
+10. Повна модель гри
+🎯 Game as function
+Game(b,d,N,seed)=
+⎩
+⎨
+⎧
+	​
+
+k∼P
+d
+N
+	​
+
+path∈P(k)
+Win=b⋅M
+d
+N
+	​
+
+(k)
+	​
+
+11. Важливий нюанс — UX vs Math
+Рівень	Реальність
+UI	кулька падає
+Math	bucket вже визначений
+12. Бонус (100 balls)
+TotalWin=
+i=1
+∑
+100
+	​
+
+b⋅M(k
+i
+	​
+
+)
+
+де:
+
+k
+i
+	​
+
+∼P(k)
+13. Volatility через variance
+Var(X)=E(X
+2
+)−[E(X)]
+2
+Var(X)=(1.4)
+2
+=1.96
+σ
+μ
+-σ
++σ
+Var(X) ≈ 1.96
+14. Ключова різниця з класичним Plinko
+Модель	Як визначається
+Класична	path → bucket
+Stake	bucket → path
+15. Найважливіший інсайт
+
+👉 Тепер задача:
+
+НЕ:
+
+як кулька рухається?
+
+А:
+
+який розподіл P(k) дає потрібний RTP + volatility + limits?
+16. Якщо формально
+Design={P(k),M(k)}⇒RTP,Var,TailRisk
+	​

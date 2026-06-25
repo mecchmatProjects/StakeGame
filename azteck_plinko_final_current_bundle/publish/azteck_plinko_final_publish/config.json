@@ -1,0 +1,1860 @@
+{
+    "workingName": "azteck_plinko",
+    "frontendConfig": {
+        "file": "fe_config.json",
+        "sha256": "1e865fe0bc472b73b5a743791cb29d56d1ef6d60f3c72896e1435a907ad68d41"
+    },
+    "gameID": "azteck_plinko",
+    "rtp": 96.05,
+    "betDenomination": 100,
+    "minDenomination": 1,
+    "betValues": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        12.0,
+        14.0,
+        16.0,
+        18.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        75.0,
+        100.0,
+        150.0,
+        200.0,
+        250.0,
+        300.0,
+        350.0,
+        400.0,
+        450.0,
+        500.0
+    ],
+    "providerNumber": 1,
+    "standardForceFile": {
+        "file": "force.json",
+        "sha256": "e1dc387ce013723e7a41b3527933ada0310bbb231a423bf73e13c39a0487aa2b"
+    },
+    "bookShelfConfig": [
+        {
+            "name": "normal_low_8",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_low_8_0.csv",
+                    "sha256": "b2fbc0ae13468b376ef757f82cf63cdd0e5039f90c15e74981693114beb8c509"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 0.7,
+            "bookLength": 999999999998,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 5.6,
+            "booksFile": {
+                "file": "books_normal_low_8.jsonl.zst",
+                "sha256": "c3864d1ebf937dc6c3e74e93c0572eac8a3e57a13d9cbaccad9add2ccf1a2f56"
+            },
+            "forceFile": {
+                "file": "force_record_normal_low_8.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_low_8",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_low_8_0.csv",
+                    "sha256": "e65a25d34ec6bff9d78d4ab049f34f6efa656f2f0096f663de91d96746311aa1"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.066572,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 554.4,
+            "booksFile": {
+                "file": "books_buy100_low_8.jsonl.zst",
+                "sha256": "f124ae5b289c7c51d418279de2984049d2d9f190f7c80eff13642503692c4b41"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_low_8.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_low_9",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_low_9_0.csv",
+                    "sha256": "5c2b511f585bd3ca38546b5dd51c50b852d13b2a06bb35d7b7f6b0f05c3177b1"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 0.7,
+            "bookLength": 999999999998,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 5.6,
+            "booksFile": {
+                "file": "books_normal_low_9.jsonl.zst",
+                "sha256": "8ab5a826d648a93e7d79bd77d467b38c3cee02ce13b9f2d94eaf0da437236502"
+            },
+            "forceFile": {
+                "file": "force_record_normal_low_9.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_low_9",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_low_9_0.csv",
+                    "sha256": "05c4cdad6fb5c62d58025a736e1713b5dfd776c2c00b440d21aeca36824a7d7d"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.071534,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 554.4,
+            "booksFile": {
+                "file": "books_buy100_low_9.jsonl.zst",
+                "sha256": "b0f56497bf410fd7e3bc0cec9b0b38f4a358f6402f97848d28673a2118d4d2b2"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_low_9.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_low_10",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_low_10_0.csv",
+                    "sha256": "2d9f3cd2707aafb3befd80a0fe3bdcfce1037a87bae33f7a38e81df8bb6c9c06"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 0.7,
+            "bookLength": 999999999998,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 8.9,
+            "booksFile": {
+                "file": "books_normal_low_10.jsonl.zst",
+                "sha256": "119c17c746e0ce510f9930b406303753686fc413788e113674ce3f3b6cb50576"
+            },
+            "forceFile": {
+                "file": "force_record_normal_low_10.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_low_10",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_low_10_0.csv",
+                    "sha256": "ea951df8007d98ae51302078046ce819950c9295f14c3005c5e4c8bcd67241b4"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.062928,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 881.1,
+            "booksFile": {
+                "file": "books_buy100_low_10.jsonl.zst",
+                "sha256": "58868b761fd6bf297c7bbc06f336965595f4b2d2e0837adc99f0db37ba553516"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_low_10.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_low_11",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_low_11_0.csv",
+                    "sha256": "fddd67179a907b488a1cc3aa0bf66479c806fdc1926b635011045f8de0eebaa2"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 0.7,
+            "bookLength": 1000000000000,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 8.4,
+            "booksFile": {
+                "file": "books_normal_low_11.jsonl.zst",
+                "sha256": "74cc9ec6adbdb155bb42a7d8e5ce0adae3b0ec5027fb8d5fba93dc88045d5c8a"
+            },
+            "forceFile": {
+                "file": "force_record_normal_low_11.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_low_11",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_low_11_0.csv",
+                    "sha256": "d51afc3a54f6020866881934d429451e10aafb21f594f8089744172608736867"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.061985,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 831.6,
+            "booksFile": {
+                "file": "books_buy100_low_11.jsonl.zst",
+                "sha256": "218d9b2ac0e21ccefe53784dab084b1c7c25810cc42895abac2724cf7af8988e"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_low_11.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_low_12",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_low_12_0.csv",
+                    "sha256": "217a45a696932940bce5fb84d20031ad366e880aae909a831901fa9459a5a30d"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 0.7,
+            "bookLength": 999999999999,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 10.0,
+            "booksFile": {
+                "file": "books_normal_low_12.jsonl.zst",
+                "sha256": "3f11e11858f8a93b0ebf7dead750eddc1fe4af7fce08a33c927c21ad0d8638d2"
+            },
+            "forceFile": {
+                "file": "force_record_normal_low_12.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_low_12",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_low_12_0.csv",
+                    "sha256": "ab1167c7168185e1e3cdfd9856e41474ae67da8662776ca1e755aafa06faa6c1"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.065024,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 990.0,
+            "booksFile": {
+                "file": "books_buy100_low_12.jsonl.zst",
+                "sha256": "b40c4713ab8dc27cdd8b24a182a5f30856acc86edebf0d57dab15873ffaa8756"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_low_12.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_low_13",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_low_13_0.csv",
+                    "sha256": "291297feb77a1c5328407a5d6a568d7595e331be93358e4effc16ee98a011b85"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 0.7,
+            "bookLength": 1000000000002,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 8.1,
+            "booksFile": {
+                "file": "books_normal_low_13.jsonl.zst",
+                "sha256": "1e681cf3a2ba040f1ff918118b1fdcfeb8bd033a044310506d14b556860fb5e4"
+            },
+            "forceFile": {
+                "file": "force_record_normal_low_13.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_low_13",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_low_13_0.csv",
+                    "sha256": "840915b6777d794f5929693435e0be8ff3789a6c8084ee10d81d5fded0339e75"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.063208,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 801.9,
+            "booksFile": {
+                "file": "books_buy100_low_13.jsonl.zst",
+                "sha256": "d0ee558716211a4bdc2c159b4b8316c600ff1474fa53768202b6d3c7b5f9efef"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_low_13.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_low_14",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_low_14_0.csv",
+                    "sha256": "23c4855ea3db3602ff99d96b77c72f24484ab6190b4f70889d069ca71347f726"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 0.7,
+            "bookLength": 1000000000000,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 7.1,
+            "booksFile": {
+                "file": "books_normal_low_14.jsonl.zst",
+                "sha256": "09100ce96c3826785167426c83d96fc9f9ddd87f59935c24ab3351b3330eb167"
+            },
+            "forceFile": {
+                "file": "force_record_normal_low_14.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_low_14",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_low_14_0.csv",
+                    "sha256": "494ac4b3a69531035c98c8a4af0db3c8daa832305aec0f8847802a9ce4df2ffd"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.062897,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 702.9,
+            "booksFile": {
+                "file": "books_buy100_low_14.jsonl.zst",
+                "sha256": "edb7a2b6247c3df30b94a63b99ad5f4986119eded8d0f493d971c9cbe9395776"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_low_14.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_low_15",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_low_15_0.csv",
+                    "sha256": "0e81c5813f8a5acee15c3dc496fd97e0115d38f2e6ee96694307f00e53301daa"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 0.7,
+            "bookLength": 1000000000000,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 15.0,
+            "booksFile": {
+                "file": "books_normal_low_15.jsonl.zst",
+                "sha256": "295b03167b15bfb63c0f3edc0b58114c8559ca4297fe7d8b7771fa56bee71b89"
+            },
+            "forceFile": {
+                "file": "force_record_normal_low_15.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_low_15",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_low_15_0.csv",
+                    "sha256": "900b0331838ca37f7be5fc5967d6d2c7fddfe073a11fe7116232ff1b02e76df9"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.054832,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 1485.0,
+            "booksFile": {
+                "file": "books_buy100_low_15.jsonl.zst",
+                "sha256": "e6fe97ba0cc923a724189aa04372c3feb2e7fe1a665abe5b4a8fa0eef445ff72"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_low_15.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_low_16",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_low_16_0.csv",
+                    "sha256": "df528bce58f19ea78bde1dc0294fde13095026b2198f118a3e6f0b8556ac0e3b"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 0.7,
+            "bookLength": 1000000000003,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 16.0,
+            "booksFile": {
+                "file": "books_normal_low_16.jsonl.zst",
+                "sha256": "fa7e65766e8c4e54f93e444c2119531f9c9f42b9c5457c8ce56d547632302b18"
+            },
+            "forceFile": {
+                "file": "force_record_normal_low_16.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_low_16",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_low_16_0.csv",
+                    "sha256": "0db5734eb61dfa0f055910e2616aaff0bc17fcc000c12faa3d39897171aaf174"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.077551,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 1584.0,
+            "booksFile": {
+                "file": "books_buy100_low_16.jsonl.zst",
+                "sha256": "bd97543ad11bf91c8c1e3ca75d7b3dfd4be00de2e57d9070069ba4d274a5c20f"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_low_16.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_medium_8",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_medium_8_0.csv",
+                    "sha256": "23e1bf43ba712251d7131f33014a1af5d347d4bd96481698cc672fab9b5b7b53"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 1.088059,
+            "bookLength": 999999999999,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 13.0,
+            "booksFile": {
+                "file": "books_normal_medium_8.jsonl.zst",
+                "sha256": "aa72efdc18129816de6bb261fcb9f0a5e8fc495a1bf8f2211e4e62e28bbfda31"
+            },
+            "forceFile": {
+                "file": "force_record_normal_medium_8.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_medium_8",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_medium_8_0.csv",
+                    "sha256": "aaca783beb4babc5b2d94896185ca0e6e88c345c3a34f941be3c3467737ce502"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.123843,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 1287.0,
+            "booksFile": {
+                "file": "books_buy100_medium_8.jsonl.zst",
+                "sha256": "bdb2a028ca41e2d4626991f6c31b71d74dce2da884152f3cf30f93ee435ac5e5"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_medium_8.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_medium_9",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_medium_9_0.csv",
+                    "sha256": "fcb4905e381ff02fd5347a0f5778f6ce08283f0ec94c1f4331965cb082854a63"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 1.058684,
+            "bookLength": 1000000000002,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 18.0,
+            "booksFile": {
+                "file": "books_normal_medium_9.jsonl.zst",
+                "sha256": "bd3542096036d093b63847a0dd841dce925b16c08e3d5575e5a3dadde8fbe38b"
+            },
+            "forceFile": {
+                "file": "force_record_normal_medium_9.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_medium_9",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_medium_9_0.csv",
+                    "sha256": "340732ac8ad75765165dfaed636edf360380e9fa9ac4b1f773131ea0298b8161"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.110935,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 1782.0,
+            "booksFile": {
+                "file": "books_buy100_medium_9.jsonl.zst",
+                "sha256": "50c451c1f7baa177aaafbdb7c308b0ee942d81bad992b118230abaad76e74242"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_medium_9.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_medium_10",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_medium_10_0.csv",
+                    "sha256": "f1c251ba4917e494b97b698d06deec89871c30cfaa96c9e609b8e6710449253c"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 0.965975,
+            "bookLength": 1000000000002,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 22.0,
+            "booksFile": {
+                "file": "books_normal_medium_10.jsonl.zst",
+                "sha256": "0a3b0090fa9f777c299127d80dca328114d7eb1ddb5a70848dfc42b7f0f684eb"
+            },
+            "forceFile": {
+                "file": "force_record_normal_medium_10.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_medium_10",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_medium_10_0.csv",
+                    "sha256": "28a4366c348d934855ef070aad4427b7043d1f11f5c6a76f93fdafc2e01c6370"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.127745,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 2178.0,
+            "booksFile": {
+                "file": "books_buy100_medium_10.jsonl.zst",
+                "sha256": "80bcb5648ceecc66d45979e8a2cf73b7689a2bee46bb4b62bb644d152bbc4fae"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_medium_10.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_medium_11",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_medium_11_0.csv",
+                    "sha256": "5e2d2552e184603ee1c22d8cdec873bd94398506a66f058c9ca4533ae62601a1"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 0.92293,
+            "bookLength": 1000000000000,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 24.0,
+            "booksFile": {
+                "file": "books_normal_medium_11.jsonl.zst",
+                "sha256": "bccda25bbd6bee495965ac70906dd39ea7e29ee0491bc9da589791f1994622e7"
+            },
+            "forceFile": {
+                "file": "force_record_normal_medium_11.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_medium_11",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_medium_11_0.csv",
+                    "sha256": "a290f7d52621f87c6d81c7c7a129aba93b51cbb6b62b5e970493affeb4d10efe"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.116764,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 2376.0,
+            "booksFile": {
+                "file": "books_buy100_medium_11.jsonl.zst",
+                "sha256": "723957c1c788758f561627d4ed010a64f9cf7036665485662cb948bd8ad97609"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_medium_11.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_medium_12",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_medium_12_0.csv",
+                    "sha256": "10aaeba9e2b965eee0626d0c3e391d6dddf20f8004e6b04897d08ad1594daf18"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 1.064222,
+            "bookLength": 999999999999,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 33.0,
+            "booksFile": {
+                "file": "books_normal_medium_12.jsonl.zst",
+                "sha256": "07eae514ad095cbf662744724531342c49f2baa394f6c0a7fa86a64fbea49de4"
+            },
+            "forceFile": {
+                "file": "force_record_normal_medium_12.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_medium_12",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_medium_12_0.csv",
+                    "sha256": "e973fee5474b01073534aac1b8d0598a1f4c4afc61053a67605f5104a2485f5a"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.105623,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 3267.0,
+            "booksFile": {
+                "file": "books_buy100_medium_12.jsonl.zst",
+                "sha256": "511786525c6e30702f6ff2f2a58d081c72cd87726edd4f96199fd278f45e89b5"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_medium_12.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_medium_13",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_medium_13_0.csv",
+                    "sha256": "ea679d4e7bfb3ec0159e16309e0318270d55aea09edec2eec2994d3f28c7fa45"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 1.142783,
+            "bookLength": 1000000000000,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 43.0,
+            "booksFile": {
+                "file": "books_normal_medium_13.jsonl.zst",
+                "sha256": "d5848d00f52d4056734100054e9111bf4c74cc7e81c853ed8f8d9f7b9aac55c6"
+            },
+            "forceFile": {
+                "file": "force_record_normal_medium_13.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_medium_13",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_medium_13_0.csv",
+                    "sha256": "83ee1c01387aecafa34f992155aa24250e095061fe0e79d653795231e0bd3e91"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.122873,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 4257.0,
+            "booksFile": {
+                "file": "books_buy100_medium_13.jsonl.zst",
+                "sha256": "4375060db270c2f88550c016faaf0e8ba0847a9a2603331d32b382e5b3854049"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_medium_13.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_medium_14",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_medium_14_0.csv",
+                    "sha256": "e2edb2327d303133026c537da05a8493c6ec868b6cdd71bcd25ec10aa3d1ad0a"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 1.150577,
+            "bookLength": 999999999997,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 58.0,
+            "booksFile": {
+                "file": "books_normal_medium_14.jsonl.zst",
+                "sha256": "43b440ff52f97dc8ac2052f3ab02afeee85873513607ac30351925776beda22d"
+            },
+            "forceFile": {
+                "file": "force_record_normal_medium_14.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_medium_14",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_medium_14_0.csv",
+                    "sha256": "0d894769403ba034783bb4c703294d667d0bbe929711e425fa7e7f61a753b863"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.960501,
+            "std": 0.137068,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 5742.0,
+            "booksFile": {
+                "file": "books_buy100_medium_14.jsonl.zst",
+                "sha256": "cf0e1d51b95d03d30bde03508337a31702c023bc0cab66a4254eebd7c76cb9a1"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_medium_14.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_medium_15",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_medium_15_0.csv",
+                    "sha256": "16704e781e460bd7cd5e72310d0f86562e97c0971d4e895bec93ee7981b32787"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 1.326293,
+            "bookLength": 999999999998,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 88.0,
+            "booksFile": {
+                "file": "books_normal_medium_15.jsonl.zst",
+                "sha256": "2034124e5538bfdeaf362ad9e704a047f635936a57caaf0dac1b00e8584f45b5"
+            },
+            "forceFile": {
+                "file": "force_record_normal_medium_15.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_medium_15",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_medium_15_0.csv",
+                    "sha256": "97fa8ef97f2d3c3541dc3034a1eab08f313d02da4b9675ccccd02cf000a72c13"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.17838,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 8712.0,
+            "booksFile": {
+                "file": "books_buy100_medium_15.jsonl.zst",
+                "sha256": "9b61d5173502b9f24969173f456c783934bd6a204a6a018104f4f5972d3c405d"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_medium_15.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_medium_16",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_medium_16_0.csv",
+                    "sha256": "e4fb934b5b13dbc6497b5af1bdfef7dabe0fc857277a1a28eaba627b36a92c97"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 1.034646,
+            "bookLength": 999999999999,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 110.0,
+            "booksFile": {
+                "file": "books_normal_medium_16.jsonl.zst",
+                "sha256": "e51216e7c5294e6496263e28c78aaa1a66f68a1aa4d11e3c2529579bbc961e03"
+            },
+            "forceFile": {
+                "file": "force_record_normal_medium_16.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_medium_16",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_medium_16_0.csv",
+                    "sha256": "fa1a6b2fd8124f42ee68f3cd4ce70b110196ab5e74fda27e9bfb79a905c6a2ea"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.183184,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 10890.0,
+            "booksFile": {
+                "file": "books_buy100_medium_16.jsonl.zst",
+                "sha256": "ded988ce71fee51ee6b4ba17318949049f95eaec2664b67342e4b761ea151b40"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_medium_16.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_high_8",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_high_8_0.csv",
+                    "sha256": "38cae2c4d6bd5485b391a56b4dc66d794f42fbcc288a739e8cd05a82ab9db8b0"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 2.236841,
+            "bookLength": 999999999999,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 29.0,
+            "booksFile": {
+                "file": "books_normal_high_8.jsonl.zst",
+                "sha256": "a4302f6b7c47715fd9698c591661f4a90bf79bdee2cd8bce82ecb92c3b4c7e81"
+            },
+            "forceFile": {
+                "file": "force_record_normal_high_8.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_high_8",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_high_8_0.csv",
+                    "sha256": "dc955a55a2d75f50c588ae771a7d8807484cf21896d076bb070e7e3b272be026"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.179566,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 2871.0,
+            "booksFile": {
+                "file": "books_buy100_high_8.jsonl.zst",
+                "sha256": "ffd338f1261a733db7c6ca2876ee2e213daa9eff0848ac06d041ba148a512b3f"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_high_8.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_high_9",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_high_9_0.csv",
+                    "sha256": "aa500b29feca09b07253b8a9a382bd4fbd7ffed950570ee949fe46d001ab36d8"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 2.264704,
+            "bookLength": 1000000000000,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 43.0,
+            "booksFile": {
+                "file": "books_normal_high_9.jsonl.zst",
+                "sha256": "960ee8c747346ed8e58ae36c601e30c65f24dce947f56a99f7a225dfd7e6413f"
+            },
+            "forceFile": {
+                "file": "force_record_normal_high_9.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_high_9",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_high_9_0.csv",
+                    "sha256": "483f8f4a5f8fb9facc71c25a6d22229352c2bbae102775a5e0c88058048d4ea2"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.176413,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 4257.0,
+            "booksFile": {
+                "file": "books_buy100_high_9.jsonl.zst",
+                "sha256": "fba5fb913fb6b7e89f382a20c1d76956619c4dc4acd3eee221ca02b0650ecf17"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_high_9.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_high_10",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_high_10_0.csv",
+                    "sha256": "c89faab321d24a64743fb87da4ab530457b3d48cd1e5da930eedc8afafa870e5"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 2.345213,
+            "bookLength": 1000000000001,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 76.0,
+            "booksFile": {
+                "file": "books_normal_high_10.jsonl.zst",
+                "sha256": "2dd6346fcbc71ef0a785bad4c7b06419207df494e624d7c4a20b053ab43969b9"
+            },
+            "forceFile": {
+                "file": "force_record_normal_high_10.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_high_10",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_high_10_0.csv",
+                    "sha256": "dfb36161b428076121385f6402ca62165b09af51ecc8af070bcaf7ec3177b320"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.960501,
+            "std": 0.196066,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 7524.0,
+            "booksFile": {
+                "file": "books_buy100_high_10.jsonl.zst",
+                "sha256": "06a64996128842c3e4a5aa21ac4b84cf668704bcfbd92a8934627dd2c76ba374"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_high_10.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_high_11",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_high_11_0.csv",
+                    "sha256": "e01497aaae2a6490c8782a5cdf082bb53c9e78462fd8248b9894ca84d216f3e3"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 2.129427,
+            "bookLength": 1000000000002,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 120.0,
+            "booksFile": {
+                "file": "books_normal_high_11.jsonl.zst",
+                "sha256": "189064b7748fe43db0c07c5058ed94829e14799bee2f1f0d6c639f171a148170"
+            },
+            "forceFile": {
+                "file": "force_record_normal_high_11.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_high_11",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_high_11_0.csv",
+                    "sha256": "ea72db68318b32589f5f45c85353fdedf11a6ad40a149032aed0a7adfabd844b"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.432809,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 11880.0,
+            "booksFile": {
+                "file": "books_buy100_high_11.jsonl.zst",
+                "sha256": "acd88bc128a134defea59347bcd55c28165a2c7dcff70bdeeb315624aff7b831"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_high_11.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_high_12",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_high_12_0.csv",
+                    "sha256": "12f1d0089a9e433bf4c8ef39622b42fcae81b327e6bedf79aa2e3803bf31445f"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 2.331825,
+            "bookLength": 1000000000003,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 170.0,
+            "booksFile": {
+                "file": "books_normal_high_12.jsonl.zst",
+                "sha256": "b1ad4b3c8fa576124d051d4826e7bb52a3b35852436d3490bfcf5b33e5567825"
+            },
+            "forceFile": {
+                "file": "force_record_normal_high_12.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_high_12",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_high_12_0.csv",
+                    "sha256": "5d5043be039de8148d5941f12e8bb41e5c764aef3528ac030507b4691d1024da"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.960502,
+            "std": 0.315198,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 16830.0,
+            "booksFile": {
+                "file": "books_buy100_high_12.jsonl.zst",
+                "sha256": "518b2a289a660ff862e92420c63d7d9bd44425993560e7dfa27a94e9a98fd98e"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_high_12.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_high_13",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_high_13_0.csv",
+                    "sha256": "78bbf0605549da3c57dd07f57fd53c62a4a4ea17dcbb315ea6731c3fce2dfc2a"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 2.479415,
+            "bookLength": 1000000000002,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 260.0,
+            "booksFile": {
+                "file": "books_normal_high_13.jsonl.zst",
+                "sha256": "4980aa29751b0edf7930162790e45b797f7f8128623dbd7e591a7b3c4d1f59a3"
+            },
+            "forceFile": {
+                "file": "force_record_normal_high_13.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_high_13",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_high_13_0.csv",
+                    "sha256": "f44626d7bdd68d405cf9d74568ca124f50b619769078d53ab2f82de356a3706e"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.430067,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 25740.0,
+            "booksFile": {
+                "file": "books_buy100_high_13.jsonl.zst",
+                "sha256": "13d697cbef65669172c11755a1a96e8f64ac8b5f364a45605dfea11b979d7e59"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_high_13.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_high_14",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_high_14_0.csv",
+                    "sha256": "21d30f4a8017c2e6c0d5e74a159451907cbca04fb101747e245da85ce21a8b54"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 2.715097,
+            "bookLength": 1000025722343,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 420.0,
+            "booksFile": {
+                "file": "books_normal_high_14.jsonl.zst",
+                "sha256": "17eec6a192ac67ba89814fc1ea093e2b638b35b762e26c7a7aefab3ea2f0868e"
+            },
+            "forceFile": {
+                "file": "force_record_normal_high_14.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_high_14",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_high_14_0.csv",
+                    "sha256": "5dc2b98a47673a9ee3a1e83a4f72190f6a4854bcbc26c1cdc7ff5aeb1cabf056"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 0.678214,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 41580.0,
+            "booksFile": {
+                "file": "books_buy100_high_14.jsonl.zst",
+                "sha256": "8e69a61086030bb252ce3eda3d0aafbacbf992c40c42fb8ecf62d3fd2a452486"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_high_14.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_high_15",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_high_15_0.csv",
+                    "sha256": "d2541f375cfe5ff7c104a821f7de8bedd56604c341ac2eac30e7e585e0ebbfb3"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 2.88073,
+            "bookLength": 1000040738100,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 620.0,
+            "booksFile": {
+                "file": "books_normal_high_15.jsonl.zst",
+                "sha256": "3a99ef0df87800f99d0dbc099ea7b581885d712ad491a13f85e885a1d29ae1a2"
+            },
+            "forceFile": {
+                "file": "force_record_normal_high_15.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_high_15",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_high_15_0.csv",
+                    "sha256": "12291af5e156bf17311ecea6432bed2126fbfc2a60519ccfb92b12c1a834e34f"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.960506,
+            "std": 0.921106,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 61380.0,
+            "booksFile": {
+                "file": "books_buy100_high_15.jsonl.zst",
+                "sha256": "2a1f726e6e976043340e7485d96620cf23090279668a1d9b127ec39369b592c5"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_high_15.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_high_16",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_high_16_0.csv",
+                    "sha256": "51468cad58c4cfa86705554377a582ffd33cc515e66f53c27716da0b194f9598"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 2.216153,
+            "bookLength": 1000065735703,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 1000.0,
+            "booksFile": {
+                "file": "books_normal_high_16.jsonl.zst",
+                "sha256": "e32f1b5ba518efc935983d32caa9afb372417265b6dbc4bd6c5d561e85404bff"
+            },
+            "forceFile": {
+                "file": "force_record_normal_high_16.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_high_16",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_high_16_0.csv",
+                    "sha256": "49a4c3d06791f112bc12a3d68aacfcab686c8928f0f04431c7c926ce76377791"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 1.546761,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 99000.0,
+            "booksFile": {
+                "file": "books_buy100_high_16.jsonl.zst",
+                "sha256": "f1bac7ef9e9a80acbb1ce77d803f705790fa88f342890e2bff8ac7d55d268048"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_high_16.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_expert_8",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_expert_8_0.csv",
+                    "sha256": "f3155e641f9e1221aff76175c91c594b7a9aaf11fb53e35e779255bd3a5ea0e4"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 3.662433,
+            "bookLength": 1000029043581,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 500.0,
+            "booksFile": {
+                "file": "books_normal_expert_8.jsonl.zst",
+                "sha256": "40143f62e01698a594e93e05b35974ebb1c8c402fb607ba155e277ee43f73fac"
+            },
+            "forceFile": {
+                "file": "force_record_normal_expert_8.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_expert_8",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_expert_8_0.csv",
+                    "sha256": "cd15acbed71e72d498788b6619f34a162c4c350a6b8c75fd7d63d1123587657a"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 1.194253,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 49500.0,
+            "booksFile": {
+                "file": "books_buy100_expert_8.jsonl.zst",
+                "sha256": "4a7b53a3e6622288003dcf4338982cbdaf71d2d15d981e7e649a9f2ded3defe5"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_expert_8.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_expert_9",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_expert_9_0.csv",
+                    "sha256": "4e224a5b99d819133b53799126080c28de138915cde059c35f4fc46c247b2fbb"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 4.550881,
+            "bookLength": 1000058102268,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 1000.0,
+            "booksFile": {
+                "file": "books_normal_expert_9.jsonl.zst",
+                "sha256": "2e83511dc93c930e582ed05ce4541949b120413f5529b70eeb613f760b7439e9"
+            },
+            "forceFile": {
+                "file": "force_record_normal_expert_9.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_expert_9",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_expert_9_0.csv",
+                    "sha256": "91574168a60a4d351a932aff4d1550e9eb2b36b27768622d2c7939e061e7fc0a"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 1.467921,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 99000.0,
+            "booksFile": {
+                "file": "books_buy100_expert_9.jsonl.zst",
+                "sha256": "40b9804eb2e526d7705da4217609b4df6757cc58bda0166e39c158c641d6d8b5"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_expert_9.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_expert_10",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_expert_10_0.csv",
+                    "sha256": "afe4daada8bc37f3a5a72e17240460ae6dd094a45036b8f8bf216f086b9c4157"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 5.341461,
+            "bookLength": 1000116214994,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 2000.0,
+            "booksFile": {
+                "file": "books_normal_expert_10.jsonl.zst",
+                "sha256": "e3a291300d129133f4dae7d0791c7c133bd8bf19f8b4c2a157c45ca4379db7ad"
+            },
+            "forceFile": {
+                "file": "force_record_normal_expert_10.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_expert_10",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_expert_10_0.csv",
+                    "sha256": "a5525cd23a2fb8947d6d7c7dc6b6dd98717b10435f7ab1b663f71202af9ee4f8"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.96051,
+            "std": 1.475547,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 100000.0,
+            "booksFile": {
+                "file": "books_buy100_expert_10.jsonl.zst",
+                "sha256": "6e0b6ff1353d75bafbe90a1142ff7621dc33d4f4a6c7ed11ea63fef016a9e907"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_expert_10.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_expert_11",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_expert_11_0.csv",
+                    "sha256": "4a6fda33348f7008b74612691ad4630f07f52e38601b942a5e4d777a9a73ee5f"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 6.303841,
+            "bookLength": 1000185962346,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 3200.0,
+            "booksFile": {
+                "file": "books_normal_expert_11.jsonl.zst",
+                "sha256": "16dd685f949a3de59aa7cce492dcfd89c8570c89872c041039acb34da860b6a1"
+            },
+            "forceFile": {
+                "file": "force_record_normal_expert_11.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_expert_11",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_expert_11_0.csv",
+                    "sha256": "cdc25b399526823aa9defea0fa23d8ed35867188487df4b9a9d22513ab8405a7"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 1.574299,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 100000.0,
+            "booksFile": {
+                "file": "books_buy100_expert_11.jsonl.zst",
+                "sha256": "e9a7a44edc3063e310b5ca97e59b6fb95eb382565c54481e1bb56ebf8017098c"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_expert_11.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_expert_12",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_expert_12_0.csv",
+                    "sha256": "419cd496085ea6f58fae1185efa78cc6ac989c47ffe69896da29b73746874bf1"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 7.783479,
+            "bookLength": 1000360379541,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 6200.0,
+            "booksFile": {
+                "file": "books_normal_expert_12.jsonl.zst",
+                "sha256": "23f8573571aa0802628488979334fac59ada181023bf44ea61e31a1ef151f474"
+            },
+            "forceFile": {
+                "file": "force_record_normal_expert_12.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_expert_12",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_expert_12_0.csv",
+                    "sha256": "dc3c8197e109c845a155bf6cedde87eb363c0739806c6105d372d1d8cde55025"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.96051,
+            "std": 1.546616,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 100000.0,
+            "booksFile": {
+                "file": "books_buy100_expert_12.jsonl.zst",
+                "sha256": "44670db51a7631761d7fa2d8732af5c5bab25791c8d341351309cfaef9a8ec40"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_expert_12.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_expert_13",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_expert_13_0.csv",
+                    "sha256": "edc8385661630774e69b325d9941054399d32121234e18ac12541f35ce28180a"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 9.298669,
+            "bookLength": 1000581377096,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 10000.0,
+            "booksFile": {
+                "file": "books_normal_expert_13.jsonl.zst",
+                "sha256": "61e683950d1b69f4dd537ae0b6c2a4d81b29851196d19ea7c539c3fc930663d7"
+            },
+            "forceFile": {
+                "file": "force_record_normal_expert_13.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_expert_13",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_expert_13_0.csv",
+                    "sha256": "bb93e7bba0b3f7bd839f09852bf8cfcdae8b7f2a7329a6d0ca6cdca136837063"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 1.766936,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 100000.0,
+            "booksFile": {
+                "file": "books_buy100_expert_13.jsonl.zst",
+                "sha256": "6268a8ffb70e193e7f279c208496622dd4db815a4159c992247e829033ba0377"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_expert_13.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_expert_14",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_expert_14_0.csv",
+                    "sha256": "54645c4c06f2dc091d71c978efcae895c31dc1ae5c0789b1179b166a460d3d63"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 12.547031,
+            "bookLength": 1001454729721,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 25000.0,
+            "booksFile": {
+                "file": "books_normal_expert_14.jsonl.zst",
+                "sha256": "cb3da675619574d949bc3c4976476aa548afe3c0dde4f9e634f1a84bf300b7a2"
+            },
+            "forceFile": {
+                "file": "force_record_normal_expert_14.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_expert_14",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_expert_14_0.csv",
+                    "sha256": "e97feb134f135b07d512a25c81b58059cba1c30a94576bf13abbded966d09e42"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 2.364435,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 100000.0,
+            "booksFile": {
+                "file": "books_buy100_expert_14.jsonl.zst",
+                "sha256": "89053d594d4cd5d98f652307a7fcc784b3c3ad7cd22b54da957aba362480b389"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_expert_14.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_expert_15",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_expert_15_0.csv",
+                    "sha256": "a9d3e06767ef60b87c3f60c0a8a66416085eaf4fa614b83cc780d835cfda24ef"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 17.000904,
+            "bookLength": 1002913648686,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 50000.0,
+            "booksFile": {
+                "file": "books_normal_expert_15.jsonl.zst",
+                "sha256": "de0a40f412d9a7b10d11f2b2991ad1f082f5799854ffdc51324ba780bf89fd7a"
+            },
+            "forceFile": {
+                "file": "force_record_normal_expert_15.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_expert_15",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_expert_15_0.csv",
+                    "sha256": "c6eef197be738ac58231be73460234db83765f5d76077c8add85093ce8dd70aa"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 1.677935,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 100000.0,
+            "booksFile": {
+                "file": "books_buy100_expert_15.jsonl.zst",
+                "sha256": "d98f5d1b2284b49be3b47ab7b98e188bd227bc09ddda6ba112258fbcf67acaab"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_expert_15.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "normal_expert_16",
+            "tables": [
+                {
+                    "file": "lookUpTable_normal_expert_16_0.csv",
+                    "sha256": "683df1c5b07e9ad2e40e540fc8f1686cb2841d0184ff83005f743e1bf2de0b8f"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.9605,
+            "std": 25.800892,
+            "bookLength": 1005844501801,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 100000.0,
+            "booksFile": {
+                "file": "books_normal_expert_16.jsonl.zst",
+                "sha256": "84195807f7420162a07cda9a8c5c13dec0a7c2260cca6becb18643cf884d17ca"
+            },
+            "forceFile": {
+                "file": "force_record_normal_expert_16.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        },
+        {
+            "name": "buy100_expert_16",
+            "tables": [
+                {
+                    "file": "lookUpTable_buy100_expert_16_0.csv",
+                    "sha256": "45aae8a93f830f6652b2af2f0f0b31d5d558aad11e091e3a6f7c98669414df62"
+                }
+            ],
+            "cost": 99.0,
+            "rtp": 0.9605,
+            "std": 1.624251,
+            "bookLength": 100000005,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 100000.0,
+            "booksFile": {
+                "file": "books_buy100_expert_16.jsonl.zst",
+                "sha256": "95e4faf964f6bc5631ded4e5787fe2bebf8110730c8e99204a5d5570bbf7ecc6"
+            },
+            "forceFile": {
+                "file": "force_record_buy100_expert_16.json",
+                "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+        }
+    ]
+}
